@@ -2,9 +2,24 @@
 
 > The App Landing theme for Cecil.
 
-## Install
+## Installation
 
-`config.yml`:
+```bash
+composer require cecil/theme-garth
+```
+
+> Or [download the latest archive](https://github.com/Cecilapp/theme-garth/releases/latest/) and uncompress its content in `themes/garth`.
+
+## Usage
+
+Add `applanding` in the `theme` section of your `config.yml`:
+
+```yaml
+theme:
+  - applanding
+```
+
+**Example:**
 
 ```yaml
 theme:
