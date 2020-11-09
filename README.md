@@ -59,5 +59,5 @@ module.exports = {
 ```
 
 ```bash
-npx tailwindcss build ./themes/landing/static/styles.css -o ./static/css/styles.css
+npx tailwindcss build ./themes/applanding/static/styles.css -o ./static/css/styles.css
 ```
