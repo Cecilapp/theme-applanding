@@ -5,10 +5,10 @@
 ## Installation
 
 ```bash
-composer require cecil/theme-garth
+composer require cecil/theme-applanding
 ```
 
-> Or [download the latest archive](https://github.com/Cecilapp/theme-garth/releases/latest/) and uncompress its content in `themes/garth`.
+> Or [download the latest archive](https://github.com/Cecilapp/theme-applanding/releases/latest/) and uncompress its content in `themes/applanding`.
 
 ## Usage
 
