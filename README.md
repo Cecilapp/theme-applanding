@@ -37,9 +37,9 @@ applanding:
   demo: https://the-butler-demo.cecil.app
 ```
 
-## Build CSS styles
+### Build CSS file
 
-Create `tailwind.config.js` file:
+Create `tailwind.config.js`:
 
 ```javascript
 module.exports = {
