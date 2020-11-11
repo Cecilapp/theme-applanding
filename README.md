@@ -6,11 +6,14 @@
 
 ```bash
 composer require cecil/theme-applanding
+npm install tailwindcss
 ```
 
 > Or [download the latest archive](https://github.com/Cecilapp/theme-applanding/releases/latest/) and uncompress its content in `themes/applanding`.
 
 ## Usage
+
+### Configure Cecil
 
 Add `applanding` in the `theme` section of your `config.yml`:
 
@@ -34,13 +37,9 @@ applanding:
   demo: https://the-butler-demo.cecil.app
 ```
 
-## Development
+## Build CSS styles
 
-```bash
-npm install tailwindcss
-```
-
-`tailwind.config.js`:
+Create `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -57,6 +56,8 @@ module.exports = {
   }
 }
 ```
+
+Run build:
 
 ```bash
 npx tailwindcss build ./themes/applanding/static/styles.css -o ./static/css/styles.css
