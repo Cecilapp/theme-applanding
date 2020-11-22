@@ -1,15 +1,18 @@
 # App Landing theme
 
-> The App Landing theme for Cecil.
+> _App Landing_ is a theme for [Cecil](https://cecil.app), powered by [Tailwind CSS](https://tailwindcss.com).
 
 ## Installation
 
 ```bash
 composer require cecil/theme-applanding
-npm install tailwindcss
 ```
 
 > Or [download the latest archive](https://github.com/Cecilapp/theme-applanding/releases/latest/) and uncompress its content in `themes/applanding`.
+
+```bash
+npm install tailwindcss@1.9.6
+```
 
 ## Usage
 
@@ -49,10 +52,7 @@ module.exports = {
     content: [
       './layouts/**/*.html.twig',
       './themes/**/layouts/**/*.html.twig',
-    ],
-    options: {
-      whitelist: [],
-    }
+    ]
   }
 }
 ```
