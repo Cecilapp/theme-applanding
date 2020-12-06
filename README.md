@@ -12,10 +12,6 @@ composer require cecil/theme-applanding
 
 > Or [download the latest archive](https://github.com/Cecilapp/theme-applanding/releases/latest/) and uncompress its content in `themes/applanding`.
 
-```bash
-npm install tailwindcss@1.9.6
-```
-
 ## Usage
 
 ### Configure Cecil
@@ -42,25 +38,8 @@ applanding:
   demo: https://the-butler-demo.cecil.app
 ```
 
-### Build CSS file
-
-Create `tailwind.config.js`:
-
-```javascript
-module.exports = {
-  purge: {
-    enabled: true,
-    mode: 'all',
-    content: [
-      './layouts/**/*.html.twig',
-      './themes/**/layouts/**/*.html.twig',
-    ]
-  }
-}
-```
-
-Run build:
+## Development
 
 ```bash
-npx tailwindcss build ./themes/applanding/static/styles.css -o ./static/css/styles.css
+npx tailwindcss-cli build ./themes/applanding/static/styles.css -o ./static/css/styles.css
 ```
