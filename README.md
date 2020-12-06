@@ -38,8 +38,20 @@ applanding:
   demo: https://the-butler-demo.cecil.app
 ```
 
-## Development
+### Build the CSS
+
+Create the Tailwind configuration file `tailwind.config.js`:
+
+```javascript
+module.exports = {
+  presets: [
+    require('./themes/applanding/tailwind.config.js')
+  ]
+}
+```
+
+Run the following command:
 
 ```bash
-npx tailwindcss-cli build ./themes/applanding/static/styles.css -o ./static/css/styles.css
+npx tailwindcss-cli build ./themes/applanding/tailwind.css -o ./static/styles.css
 ```
