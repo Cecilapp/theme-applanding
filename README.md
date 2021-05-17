@@ -55,3 +55,9 @@ Run the following command:
 ```bash
 npx tailwindcss-cli build ./themes/applanding/tailwind.css -o ./static/styles.css
 ```
+
+## License
+
+ _App Landing_ is a free software distributed under the terms of the MIT license.
+
+© [Arnaud Ligny](https://arnaudligny.fr)
