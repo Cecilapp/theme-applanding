@@ -14,6 +14,21 @@
         </div>
         {#- Right Col ~#}
         <div class="w-full xl:w-3/5 py-6 overflow-y-hidden">
-          <a href="{{ site.applanding.demo }}"><img src="{{ asset(site.applanding.screenshot)|url }}" width="{{ asset(site.applanding.screenshot).width }}" height="{{ asset(site.applanding.screenshot).height }}" alt="Screenshot" title="Go to the demo" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom"></a>
+          <a href="{{ site.applanding.demo }}" title="Go to the demo">
+            {% if site.applanding.screenshot.mobile.light is defined %}
+              {% set mobile = asset(site.applanding.screenshot.mobile.light) %}
+              {% set mobile_dark = asset(site.applanding.screenshot.mobile.dark|default(site.applanding.screenshot.mobile.light)) %}
+            <picture class="md:hidden">
+              <source srcset="{{ mobile_dark|url }}" media="(prefers-color-scheme: dark)">
+                <img src="{{ mobile|url }}" width="{{ mobile.width }}" height="{{ mobile.height }}" alt="Screenshot" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom">
+            </picture>
+            {% endif %}
+            {% set desktop = asset(site.applanding.screenshot.desktop.light) %}
+            {% set desktop_dark = asset(site.applanding.screenshot.desktop.dark|default(site.applanding.screenshot.desktop.light)) %}
+            <picture class="{% if site.applanding.screenshot.mobile.light is defined %}hidden {% endif %}md:block">
+              <source srcset="{{ desktop_dark|url }}" media="(prefers-color-scheme: dark)">
+                <img src="{{ desktop|url }}" width="{{ desktop.width }}" height="{{ desktop.height }}" alt="Screenshot" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom">
+            </picture>
+          </a>
         </div>
         {%- endblock ~%}

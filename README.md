@@ -53,7 +53,7 @@ module.exports = {
 Run the following command:
 
 ```bash
-npx tailwindcss-cli build ./themes/applanding/tailwind.css -o ./static/styles.css
+npx tailwindcss -i ./themes/applanding/tailwind.css -o ./static/styles.css
 ```
 
 ## License
