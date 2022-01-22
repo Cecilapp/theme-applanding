@@ -23,8 +23,8 @@
                 <img src="{{ mobile|url }}" width="{{ mobile.width }}" height="{{ mobile.height }}" alt="Screenshot" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom">
             </picture>
             {% endif %}
-            {% set desktop = asset(site.applanding.screenshot.desktop.light) %}
-            {% set desktop_dark = asset(site.applanding.screenshot.desktop.dark|default(site.applanding.screenshot.desktop.light)) %}
+            {% set desktop = asset(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot)) %}
+            {% set desktop_dark = asset(site.applanding.screenshot.desktop.dark|default(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot))) %}
             <picture class="{% if site.applanding.screenshot.mobile.light is defined %}hidden {% endif %}md:block">
               <source srcset="{{ desktop_dark|url }}" media="(prefers-color-scheme: dark)">
                 <img src="{{ desktop|url }}" width="{{ desktop.width }}" height="{{ desktop.height }}" alt="Screenshot" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom">
