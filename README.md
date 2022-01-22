@@ -34,7 +34,7 @@ applanding:
       url: https://cecil.app/hosting/netlify/deploy
       image: https://www.netlify.com/img/deploy/button.svg
   source: https://github.com/Cecilapp/the-butler#readme
-  screenshot: /cecil-preview.png
+  screenshot: cecil-preview.png
   demo: https://the-butler-demo.cecil.app
 ```
 
@@ -53,7 +53,7 @@ module.exports = {
 Run the following command:
 
 ```bash
-npx tailwindcss -i ./themes/applanding/tailwind.css -o ./static/styles.css
+npx tailwindcss -i ./themes/applanding/tailwind.css -o ./assets/styles.css
 ```
 
 ## License
