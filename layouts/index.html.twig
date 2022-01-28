@@ -4,7 +4,7 @@
         {#- Left Col ~#}
         <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
           <h1 class="my-4 text-3xl md:text-5xl font-bold leading-tight text-center md:text-left slide-in-bottom-h1">{{ site.baseline }}</h1>
-          <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">{{ page.content|striptags('<a>') }}</p>
+          <div class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">{{ page.content }}</div>
           <div class="flex w-full justify-center md:justify-start fade-in">
             {%- for button in site.applanding.buttons ~%}
             <a href="{{ button.url }}"><img src="{{ button.image }}" class="h-12 bounce-top-icons{% if not loop.last %} pr-4{% endif %}" alt="{{ button.name }} button"></a>
