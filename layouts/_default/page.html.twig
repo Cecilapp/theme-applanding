@@ -19,7 +19,7 @@
             {{ site.title }}
           </a>
           {#- Links ~#}
-          <div class="flex w-1/4 justify-end content-center">
+          <div class="flex w-1/4 justify-end content-center fade-in">
             <a class="inline-block no-underline hover:text-slate-700 dark:hover:text-slate-100 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4" href="{{ site.applanding.source }}">
               <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" aria-labelledby="github">
                 <title id="github" lang="{{ site.language }}">GitHub</title>
@@ -35,7 +35,7 @@
         {{ page.content }}
         {%- endblock ~%}
         {#- Footer ~#}
-        <div class="w-full lg:pt-16 pb-6 text-sm text-center md:text-left fade-in">
+        <div class="w-full lg:pt-16 text-sm text-center md:text-left fade-in">
           <a class="text-slate-700 dark:text-slate-300 no-underline hover:no-underline" href="{{ cecil.url }}">Powered by Cecil</a>
         </div>
       </div>
