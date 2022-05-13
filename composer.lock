@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "cecil/theme-installer",
-            "version": "1.4.2",
+            "version": "1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-installer.git",
-                "reference": "6c7d1423f7ecb54b81a36b4432c6304d2d193e37"
+                "reference": "12b1d72ff38e1199eaca34877a64008b6a65e393"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-installer/zipball/6c7d1423f7ecb54b81a36b4432c6304d2d193e37",
-                "reference": "6c7d1423f7ecb54b81a36b4432c6304d2d193e37",
+                "url": "https://api.github.com/repos/Cecilapp/theme-installer/zipball/12b1d72ff38e1199eaca34877a64008b6a65e393",
+                "reference": "12b1d72ff38e1199eaca34877a64008b6a65e393",
                 "shasum": ""
             },
             "require": {
@@ -45,12 +45,12 @@
             "authors": [
                 {
                     "name": "Arnaud Ligny",
-                    "email": "arnaud@ligny.org",
+                    "email": "arnaud@ligny.fr",
                     "homepage": "https://arnaudligny.fr",
                     "role": "Developer"
                 }
             ],
-            "description": "Installer for Cecil themes",
+            "description": "Installer for Cecil's themes",
             "keywords": [
                 "cecil",
                 "installer",
@@ -58,15 +58,23 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-installer/issues",
-                "source": "https://github.com/Cecilapp/theme-installer/tree/1.4.2"
+                "source": "https://github.com/Cecilapp/theme-installer/tree/1.4.5"
             },
             "funding": [
                 {
                     "url": "https://www.paypal.me/narno",
                     "type": "custom"
+                },
+                {
+                    "url": "https://github.com/ArnaudLigny",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/cecil",
+                    "type": "open_collective"
                 }
             ],
-            "time": "2020-11-06T11:57:35+00:00"
+            "time": "2022-01-06T10:54:26+00:00"
         }
     ],
     "packages-dev": [],
@@ -77,5 +85,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.3.0"
 }
