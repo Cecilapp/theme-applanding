@@ -8,7 +8,7 @@
           <div class="flex w-full justify-center md:justify-start fade-in">
             {%- for button in site.applanding.buttons ~%}
             <a href="{{ button.url }}">
-              {%- set class = 'h-12 w-full bounce-top-icons' -%}
+              {%- set class = 'md:h-12 w-full bounce-top-icons' -%}
               {%- if not loop.last -%}
                 {%- set class = class ~ ' pr-4' -%}
               {%- endif ~%}
