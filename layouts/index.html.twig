@@ -16,7 +16,20 @@
             </a>
             {%- endfor ~%}
           </div>
-          <p class="text-center md:text-left fade-in">Source code on <a class="font-bold" href="{{ site.applanding.source }}">GitHub</a></p>
+          <ul class="fade-in">
+            <li class="flex items-center mt-2 justify-center md:justify-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <a href="{{ site.applanding.documentation }}" class="font-medium">Documentation</a>
+            </li>
+            <li class="flex items-center mt-2 justify-center md:justify-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <a href="{{ site.applanding.source }}" class="font-medium">Source code</a>
+            </li>
+          </ul>
         </div>
         {#- Right Col ~#}
         <div class="w-full xl:w-3/5 py-6 xl:py-0 overflow-y-hidden">
