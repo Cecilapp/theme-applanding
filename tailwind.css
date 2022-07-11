@@ -5,6 +5,15 @@
 
 /* Base styles */
 @layer base {
+  h1 {
+    @apply mb-4 text-3xl md:text-5xl font-bold;
+  }
+  h2 {
+    @apply font-bold;
+  }
+  p {
+    @apply mb-3;
+  }
   a:hover {
      @apply underline;
   }
