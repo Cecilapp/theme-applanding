@@ -34,17 +34,17 @@
         {#- Right Col ~#}
         <div class="w-full xl:w-3/5 py-6 xl:py-0 overflow-y-hidden">
           <a href="{{ site.applanding.demo }}" title="Go to the demo">
-            {%- if site.applanding.screenshot.mobile.light is defined -%}
-              {%- set mobile = asset(site.applanding.screenshot.mobile.light) -%}
-              {%- set mobile_dark = asset(site.applanding.screenshot.mobile.dark|default(site.applanding.screenshot.mobile.light)) ~%}
+            {%- if site.applanding.screenshot.mobile.light is defined or site.applanding.screenshot.mobile is defined -%}
+              {%- set mobile = asset(site.applanding.screenshot.mobile.light|default(site.applanding.screenshot.mobile)) -%}
+              {%- set mobile_dark = asset(site.applanding.screenshot.mobile.dark|default(site.applanding.screenshot.mobile.light|default(site.applanding.screenshot.mobile))) ~%}
             <picture class="md:hidden">
               <source srcset="{{ mobile_dark|url }}" media="(prefers-color-scheme: dark)">
               <img src="{{ mobile|url }}" width="{{ mobile.width }}" height="{{ mobile.height }}" alt="Screenshot" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom">
             </picture>
             {%- endif -%}
-            {%- set desktop = asset(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot)) -%}
-            {%- set desktop_dark = asset(site.applanding.screenshot.desktop.dark|default(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot))) ~%}
-            <picture class="{% if site.applanding.screenshot.mobile.light is defined %}hidden {% endif %}md:block">
+            {%- set desktop = asset(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot.desktop|default(site.applanding.screenshot))) -%}
+            {%- set desktop_dark = asset(site.applanding.screenshot.desktop.dark|default(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot.desktop|default(site.applanding.screenshot)))) ~%}
+            <picture class="{% if site.applanding.screenshot.mobile.light is defined or site.applanding.screenshot.mobile is defined %}hidden {% endif %}md:block">
               <source srcset="{{ desktop_dark|url }}" media="(prefers-color-scheme: dark)">
               <img src="{{ desktop|url }}" width="{{ desktop.width }}" height="{{ desktop.height }}" alt="Screenshot" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom">
             </picture>
