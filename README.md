@@ -1,6 +1,6 @@
 # App Landing theme
 
-> _App Landing_ is a theme for [Cecil](https://cecil.app), powered by [Tailwind CSS](https://tailwindcss.com).
+_App Landing_ is a theme for [Cecil](https://cecil.app), powered by [Tailwind CSS](https://tailwindcss.com).
 
 ![Demo screenshot](docs/screenshot.png)
 
