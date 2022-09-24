@@ -21,32 +21,32 @@
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
               </svg>
-              <a href="{{ site.applanding.documentation }}" class="font-medium">Documentation</a>
+              <a href="{{ site.applanding.documentation }}" class="font-medium">{% trans %}Documentation{% endtrans %}</a>
             </li>
             <li class="flex items-center mt-2 justify-center md:justify-start">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
               </svg>
-              <a href="{{ site.applanding.source }}" class="font-medium">Source code</a>
+              <a href="{{ site.applanding.source }}" class="font-medium">{% trans %}Source code{% endtrans %}</a>
             </li>
           </ul>
         </div>
         {#- Right Col ~#}
         <div class="w-full xl:w-3/5 py-6 xl:py-0 overflow-y-hidden">
-          <a href="{{ site.applanding.demo }}" title="Go to the demo">
+          <a href="{{ site.applanding.demo }}" title="{% trans %}Go to the demo{% endtrans %}">
             {%- if site.applanding.screenshot.mobile.light is defined or site.applanding.screenshot.mobile is defined -%}
               {%- set mobile = asset(site.applanding.screenshot.mobile.light|default(site.applanding.screenshot.mobile)) -%}
               {%- set mobile_dark = asset(site.applanding.screenshot.mobile.dark|default(site.applanding.screenshot.mobile.light|default(site.applanding.screenshot.mobile))) ~%}
             <picture class="md:hidden">
               <source srcset="{{ mobile_dark|url }}" media="(prefers-color-scheme: dark)">
-              <img src="{{ mobile|url }}" width="{{ mobile.width }}" height="{{ mobile.height }}" alt="Screenshot" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom">
+              <img src="{{ mobile|url }}" width="{{ mobile.width }}" height="{{ mobile.height }}" alt="{% trans %}Screenshot{% endtrans %}" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom">
             </picture>
             {%- endif -%}
             {%- set desktop = asset(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot.desktop|default(site.applanding.screenshot))) -%}
             {%- set desktop_dark = asset(site.applanding.screenshot.desktop.dark|default(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot.desktop|default(site.applanding.screenshot)))) ~%}
             <picture class="{% if site.applanding.screenshot.mobile.light is defined or site.applanding.screenshot.mobile is defined %}hidden {% endif %}md:block">
               <source srcset="{{ desktop_dark|url }}" media="(prefers-color-scheme: dark)">
-              <img src="{{ desktop|url }}" width="{{ desktop.width }}" height="{{ desktop.height }}" alt="Screenshot" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom">
+              <img src="{{ desktop|url }}" width="{{ desktop.width }}" height="{{ desktop.height }}" alt="{% trans %}Screenshot{% endtrans %}" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom">
             </picture>
           </a>
         </div>
