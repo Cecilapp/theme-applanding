@@ -6,7 +6,7 @@
           <h1 class="leading-tight text-center md:text-left slide-in-bottom-h1">{{ site.baseline }}</h1>
           <div class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">{{ page.content }}</div>
           <div class="flex w-full justify-center md:justify-start fade-in">
-            {%- for button in site.applanding.buttons ~%}
+          {%- for button in site.applanding.buttons ~%}
             <a href="{{ button.url }}">
               {%- set class = 'md:h-12 w-full bounce-top-icons' -%}
               {%- if not loop.last -%}
@@ -14,26 +14,26 @@
               {%- endif ~%}
               {{ asset(button.image)|html({class, alt: button.name ~ ' button'}) }}
             </a>
-            {%- endfor ~%}
+          {%- endfor ~%}
           </div>
           <ul class="fade-in">
+          {%- for link in ['source', 'documentation', 'demo'] ~%}
+            {%- if attribute(site.applanding, link) is defined ~%}
             <li class="flex items-center mt-2 justify-center md:justify-start">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
               </svg>
-              <a href="{{ site.applanding.documentation }}" class="font-medium">{% trans %}Documentation{% endtrans %}</a>
+              <a href="{{ attribute(site.applanding, link) }}" class="font-medium">{{ link|trans }}</a>
             </li>
-            <li class="flex items-center mt-2 justify-center md:justify-start">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-              </svg>
-              <a href="{{ site.applanding.source }}" class="font-medium">{% trans %}Source code{% endtrans %}</a>
-            </li>
+            {%- endif ~%}
+          {%- endfor ~%}
           </ul>
         </div>
         {#- Right Col ~#}
         <div class="w-full xl:w-3/5 py-6 xl:py-0 overflow-y-hidden">
+          {%- if site.applanding.demo is defined ~%}
           <a href="{{ site.applanding.demo }}" title="{% trans %}Go to the demo{% endtrans %}">
+          {%- endif ~%}
             {%- if site.applanding.screenshot.mobile.light is defined or site.applanding.screenshot.mobile is defined -%}
               {%- set mobile = asset(site.applanding.screenshot.mobile.light|default(site.applanding.screenshot.mobile)) -%}
               {%- set mobile_dark = asset(site.applanding.screenshot.mobile.dark|default(site.applanding.screenshot.mobile.light|default(site.applanding.screenshot.mobile))) ~%}
@@ -48,6 +48,8 @@
               <source srcset="{{ desktop_dark|url }}" media="(prefers-color-scheme: dark)">
               <img src="{{ desktop|url }}" width="{{ desktop.width }}" height="{{ desktop.height }}" alt="{% trans %}Screenshot{% endtrans %}" class="w-5/6 mx-auto lg:mr-0 slide-in-bottom">
             </picture>
+          {%- if site.applanding.demo is defined ~%}
           </a>
+          {%- endif ~%}
         </div>
         {%- endblock ~%}
