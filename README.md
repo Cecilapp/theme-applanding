@@ -35,8 +35,8 @@ applanding:
       image: https://www.netlify.com/img/deploy/button.svg
   source: https://github.com/Cecilapp/the-butler
   documentation: https://github.com/Cecilapp/the-butler#readme
-  screenshot: cecil-preview.png
   demo: https://the-butler-demo.cecil.app
+  screenshot: cecil-preview.png
 ```
 
 ### Build the CSS
