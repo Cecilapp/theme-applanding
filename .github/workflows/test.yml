@@ -1,0 +1,51 @@
+name: Test
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  test-theme:
+    name: Test theme
+    runs-on: ubuntu-latest
+    env:
+      CECIL_BASEURL: https://cecilapp.github.io/theme-applanding/
+      CECIL_CANONICALURL: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy_url.outputs.url }}
+    steps:
+    - name: Download Cecil
+      run: |
+        curl -sSOL https://cecil.app/cecil.phar
+        php cecil.phar --version
+
+    - name: Create demo site
+      run: php cecil.phar new:site demo
+
+    - name: Install theme
+      uses: actions/checkout@master
+      with:
+        path: demo/themes/applanding
+
+    - name: Add theme
+      run: |
+        echo -e "theme:\n  - applanding" >> demo/config.yml
+        rm -rf demo/layouts
+
+    - name: Build
+      run: php cecil.phar build -vv demo
+
+    - name: Deploy
+      uses: Cecilapp/GitHub-Pages-deploy@v3
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        email: arnaud@ligny.org
+        build_dir: demo/_site
+
+    - name: Deploy URL
+      if: ${{ success() }}
+      id: deploy_url
+      run: echo "::set-output name=url::$CECIL_BASEURL"
