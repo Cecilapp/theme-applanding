@@ -33,6 +33,20 @@ jobs:
         echo -e "theme:\n  - applanding" >> ./demo/config.yml
         rm -rf ./demo/layouts
 
+    - name: Add theme config
+      run: |
+        cat >> ./demo/config.yml <<EOF
+          applanding:
+            buttons:
+              - name: Netlify
+                url: https://cecil.app/hosting/netlify/deploy
+                image: https://www.netlify.com/img/deploy/button.svg
+            source: https://github.com/Cecilapp/the-butler
+            documentation: https://github.com/Cecilapp/the-butler#readme
+            demo: https://the-butler-demo.cecil.app
+            screenshot: cecil-preview.png
+        EOF
+
     - name: Add Tailwind config
       run: |
           cat > ./demo/tailwind.config.js <<EOF
