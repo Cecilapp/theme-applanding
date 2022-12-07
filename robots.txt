@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /page/1/
+Disallow: /blog/page/1/
+Disallow: /404.html
+Sitemap: https://cecilapp.github.io/theme-applanding/sitemap.xml

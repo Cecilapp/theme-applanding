@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="https://cecilapp.github.io/theme-applanding/xsl/atom.xsl" media="all"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://cecilapp.github.io/theme-applanding/blog/</id>
+  <title>Cecil - Blog</title>
+  <subtitle><![CDATA[Site description]]></subtitle>
+  <link href="https://cecilapp.github.io/theme-applanding/blog/atom.xml" rel="self" type="application/atom+xml" />
+  <link href="https://cecilapp.github.io/theme-applanding/blog/" rel="alternate" type="text/html" />
+  <updated>2022-09-06T00:00:00+00:00</updated>
+  <author>
+    <name>Arnaud Ligny</name>
+    <uri>https://arnaudligny.fr</uri>
+  </author>
+  <entry xml:lang="en">
+    <id>https://cecilapp.github.io/theme-applanding/blog/post-6/</id>
+    <title>Post 6</title>
+    <content type="html">
+      <![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus non enim sed maximus. Phasellus in accumsan nibh, at mollis nibh. Nunc id leo venenatis, pellentesque odio sit amet, lobortis augue. Sed hendrerit vulputate quam, quis dictum est molestie ac. In convallis urna sit amet dolor semper vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<!-- break -->
+<p>Fusce ut sodales risus, ut dictum libero. Aliquam erat volutpat. Mauris malesuada consequat ultrices. Duis vulputate eget tellus aliquam aliquam. Proin vulputate mi vitae neque ornare, ac convallis odio venenatis. Suspendisse nec tempus felis. Nunc eget tincidunt nibh, nec varius turpis. Vivamus ullamcorper nisi sed molestie mollis.</p>
+<p>Donec facilisis consequat urna, quis semper nisi ultrices vitae. Etiam malesuada ligula in accumsan posuere. Morbi ac ante consequat, vulputate nibh et, malesuada orci. Maecenas eget tristique dui. Aenean id urna pharetra, sollicitudin velit quis, varius erat. Quisque sed justo lobortis, volutpat eros in, viverra erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac magna eget massa tristique elementum. Mauris quis nisl id nisl maximus elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer urna tortor, sodales in lacus in, condimentum varius nulla. Phasellus faucibus felis nec augue dictum, sit amet condimentum dui pulvinar. Praesent nec suscipit arcu, ut aliquet erat. Maecenas sollicitudin porta elit eget fringilla. Pellentesque venenatis tortor dignissim diam malesuada condimentum.</p>
+<p>Suspendisse interdum neque quis diam luctus lobortis. Etiam condimentum et tortor eu volutpat. Pellentesque at congue metus. Pellentesque blandit bibendum dolor sit amet vulputate. Aliquam nunc dolor, condimentum sit amet dapibus vitae, faucibus in lorem. Aliquam fringilla tincidunt metus. Etiam ultrices nulla vel purus gravida, non pharetra ipsum auctor. Mauris suscipit mauris vitae facilisis tempus. Praesent laoreet purus vitae est pharetra lacinia. Nullam sodales eu eros et placerat. Vestibulum quis mattis lacus, a facilisis turpis. Nulla non volutpat nisi. Sed tincidunt luctus nisi. Ut vel purus tortor.</p>
+<p>Quisque facilisis consectetur augue id sodales. Aliquam interdum scelerisque tortor quis hendrerit. In laoreet convallis urna, et auctor arcu varius quis. Nullam consequat dolor nec malesuada eleifend. Quisque egestas purus vel lorem scelerisque, et tincidunt sapien volutpat. Sed nec scelerisque neque, ut molestie velit. Mauris vitae tristique ex. Nunc lacinia justo eros, eget gravida ante fermentum ut. Morbi at porttitor quam, non imperdiet tellus.</p>]]>
+    </content>
+    <link href="https://cecilapp.github.io/theme-applanding/blog/post-6/" rel="alternate" type="text/html" />
+    <published>2022-09-06T00:00:00+00:00</published>
+    <updated>2022-12-07T22:10:49+00:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://cecilapp.github.io/theme-applanding/blog/post-5/</id>
+    <title>Post 5</title>
+    <content type="html">
+      <![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus non enim sed maximus. Phasellus in accumsan nibh, at mollis nibh. Nunc id leo venenatis, pellentesque odio sit amet, lobortis augue. Sed hendrerit vulputate quam, quis dictum est molestie ac. In convallis urna sit amet dolor semper vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<!-- break -->
+<p>Fusce ut sodales risus, ut dictum libero. Aliquam erat volutpat. Mauris malesuada consequat ultrices. Duis vulputate eget tellus aliquam aliquam. Proin vulputate mi vitae neque ornare, ac convallis odio venenatis. Suspendisse nec tempus felis. Nunc eget tincidunt nibh, nec varius turpis. Vivamus ullamcorper nisi sed molestie mollis.</p>
+<p>Donec facilisis consequat urna, quis semper nisi ultrices vitae. Etiam malesuada ligula in accumsan posuere. Morbi ac ante consequat, vulputate nibh et, malesuada orci. Maecenas eget tristique dui. Aenean id urna pharetra, sollicitudin velit quis, varius erat. Quisque sed justo lobortis, volutpat eros in, viverra erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac magna eget massa tristique elementum. Mauris quis nisl id nisl maximus elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer urna tortor, sodales in lacus in, condimentum varius nulla. Phasellus faucibus felis nec augue dictum, sit amet condimentum dui pulvinar. Praesent nec suscipit arcu, ut aliquet erat. Maecenas sollicitudin porta elit eget fringilla. Pellentesque venenatis tortor dignissim diam malesuada condimentum.</p>
+<p>Suspendisse interdum neque quis diam luctus lobortis. Etiam condimentum et tortor eu volutpat. Pellentesque at congue metus. Pellentesque blandit bibendum dolor sit amet vulputate. Aliquam nunc dolor, condimentum sit amet dapibus vitae, faucibus in lorem. Aliquam fringilla tincidunt metus. Etiam ultrices nulla vel purus gravida, non pharetra ipsum auctor. Mauris suscipit mauris vitae facilisis tempus. Praesent laoreet purus vitae est pharetra lacinia. Nullam sodales eu eros et placerat. Vestibulum quis mattis lacus, a facilisis turpis. Nulla non volutpat nisi. Sed tincidunt luctus nisi. Ut vel purus tortor.</p>
+<p>Quisque facilisis consectetur augue id sodales. Aliquam interdum scelerisque tortor quis hendrerit. In laoreet convallis urna, et auctor arcu varius quis. Nullam consequat dolor nec malesuada eleifend. Quisque egestas purus vel lorem scelerisque, et tincidunt sapien volutpat. Sed nec scelerisque neque, ut molestie velit. Mauris vitae tristique ex. Nunc lacinia justo eros, eget gravida ante fermentum ut. Morbi at porttitor quam, non imperdiet tellus.</p>]]>
+    </content>
+    <link href="https://cecilapp.github.io/theme-applanding/blog/post-5/" rel="alternate" type="text/html" />
+    <published>2022-09-05T00:00:00+00:00</published>
+    <updated>2022-12-07T22:10:49+00:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://cecilapp.github.io/theme-applanding/blog/post-4/</id>
+    <title>Post 4</title>
+    <content type="html">
+      <![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus non enim sed maximus. Phasellus in accumsan nibh, at mollis nibh. Nunc id leo venenatis, pellentesque odio sit amet, lobortis augue. Sed hendrerit vulputate quam, quis dictum est molestie ac. In convallis urna sit amet dolor semper vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<!-- break -->
+<p>Fusce ut sodales risus, ut dictum libero. Aliquam erat volutpat. Mauris malesuada consequat ultrices. Duis vulputate eget tellus aliquam aliquam. Proin vulputate mi vitae neque ornare, ac convallis odio venenatis. Suspendisse nec tempus felis. Nunc eget tincidunt nibh, nec varius turpis. Vivamus ullamcorper nisi sed molestie mollis.</p>
+<p>Donec facilisis consequat urna, quis semper nisi ultrices vitae. Etiam malesuada ligula in accumsan posuere. Morbi ac ante consequat, vulputate nibh et, malesuada orci. Maecenas eget tristique dui. Aenean id urna pharetra, sollicitudin velit quis, varius erat. Quisque sed justo lobortis, volutpat eros in, viverra erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac magna eget massa tristique elementum. Mauris quis nisl id nisl maximus elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer urna tortor, sodales in lacus in, condimentum varius nulla. Phasellus faucibus felis nec augue dictum, sit amet condimentum dui pulvinar. Praesent nec suscipit arcu, ut aliquet erat. Maecenas sollicitudin porta elit eget fringilla. Pellentesque venenatis tortor dignissim diam malesuada condimentum.</p>
+<p>Suspendisse interdum neque quis diam luctus lobortis. Etiam condimentum et tortor eu volutpat. Pellentesque at congue metus. Pellentesque blandit bibendum dolor sit amet vulputate. Aliquam nunc dolor, condimentum sit amet dapibus vitae, faucibus in lorem. Aliquam fringilla tincidunt metus. Etiam ultrices nulla vel purus gravida, non pharetra ipsum auctor. Mauris suscipit mauris vitae facilisis tempus. Praesent laoreet purus vitae est pharetra lacinia. Nullam sodales eu eros et placerat. Vestibulum quis mattis lacus, a facilisis turpis. Nulla non volutpat nisi. Sed tincidunt luctus nisi. Ut vel purus tortor.</p>
+<p>Quisque facilisis consectetur augue id sodales. Aliquam interdum scelerisque tortor quis hendrerit. In laoreet convallis urna, et auctor arcu varius quis. Nullam consequat dolor nec malesuada eleifend. Quisque egestas purus vel lorem scelerisque, et tincidunt sapien volutpat. Sed nec scelerisque neque, ut molestie velit. Mauris vitae tristique ex. Nunc lacinia justo eros, eget gravida ante fermentum ut. Morbi at porttitor quam, non imperdiet tellus.</p>]]>
+    </content>
+    <link href="https://cecilapp.github.io/theme-applanding/blog/post-4/" rel="alternate" type="text/html" />
+    <published>2022-09-04T00:00:00+00:00</published>
+    <updated>2022-12-07T22:10:49+00:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://cecilapp.github.io/theme-applanding/blog/post-3/</id>
+    <title>Post 3</title>
+    <content type="html">
+      <![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus non enim sed maximus. Phasellus in accumsan nibh, at mollis nibh. Nunc id leo venenatis, pellentesque odio sit amet, lobortis augue. Sed hendrerit vulputate quam, quis dictum est molestie ac. In convallis urna sit amet dolor semper vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<!-- break -->
+<p>Fusce ut sodales risus, ut dictum libero. Aliquam erat volutpat. Mauris malesuada consequat ultrices. Duis vulputate eget tellus aliquam aliquam. Proin vulputate mi vitae neque ornare, ac convallis odio venenatis. Suspendisse nec tempus felis. Nunc eget tincidunt nibh, nec varius turpis. Vivamus ullamcorper nisi sed molestie mollis.</p>
+<p>Donec facilisis consequat urna, quis semper nisi ultrices vitae. Etiam malesuada ligula in accumsan posuere. Morbi ac ante consequat, vulputate nibh et, malesuada orci. Maecenas eget tristique dui. Aenean id urna pharetra, sollicitudin velit quis, varius erat. Quisque sed justo lobortis, volutpat eros in, viverra erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac magna eget massa tristique elementum. Mauris quis nisl id nisl maximus elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer urna tortor, sodales in lacus in, condimentum varius nulla. Phasellus faucibus felis nec augue dictum, sit amet condimentum dui pulvinar. Praesent nec suscipit arcu, ut aliquet erat. Maecenas sollicitudin porta elit eget fringilla. Pellentesque venenatis tortor dignissim diam malesuada condimentum.</p>
+<p>Suspendisse interdum neque quis diam luctus lobortis. Etiam condimentum et tortor eu volutpat. Pellentesque at congue metus. Pellentesque blandit bibendum dolor sit amet vulputate. Aliquam nunc dolor, condimentum sit amet dapibus vitae, faucibus in lorem. Aliquam fringilla tincidunt metus. Etiam ultrices nulla vel purus gravida, non pharetra ipsum auctor. Mauris suscipit mauris vitae facilisis tempus. Praesent laoreet purus vitae est pharetra lacinia. Nullam sodales eu eros et placerat. Vestibulum quis mattis lacus, a facilisis turpis. Nulla non volutpat nisi. Sed tincidunt luctus nisi. Ut vel purus tortor.</p>
+<p>Quisque facilisis consectetur augue id sodales. Aliquam interdum scelerisque tortor quis hendrerit. In laoreet convallis urna, et auctor arcu varius quis. Nullam consequat dolor nec malesuada eleifend. Quisque egestas purus vel lorem scelerisque, et tincidunt sapien volutpat. Sed nec scelerisque neque, ut molestie velit. Mauris vitae tristique ex. Nunc lacinia justo eros, eget gravida ante fermentum ut. Morbi at porttitor quam, non imperdiet tellus.</p>]]>
+    </content>
+    <link href="https://cecilapp.github.io/theme-applanding/blog/post-3/" rel="alternate" type="text/html" />
+    <published>2022-09-03T00:00:00+00:00</published>
+    <updated>2022-12-07T22:10:49+00:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://cecilapp.github.io/theme-applanding/blog/post-2/</id>
+    <title>Post 2</title>
+    <content type="html">
+      <![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus non enim sed maximus. Phasellus in accumsan nibh, at mollis nibh. Nunc id leo venenatis, pellentesque odio sit amet, lobortis augue. Sed hendrerit vulputate quam, quis dictum est molestie ac. In convallis urna sit amet dolor semper vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<!-- break -->
+<p>Fusce ut sodales risus, ut dictum libero. Aliquam erat volutpat. Mauris malesuada consequat ultrices. Duis vulputate eget tellus aliquam aliquam. Proin vulputate mi vitae neque ornare, ac convallis odio venenatis. Suspendisse nec tempus felis. Nunc eget tincidunt nibh, nec varius turpis. Vivamus ullamcorper nisi sed molestie mollis.</p>
+<p>Donec facilisis consequat urna, quis semper nisi ultrices vitae. Etiam malesuada ligula in accumsan posuere. Morbi ac ante consequat, vulputate nibh et, malesuada orci. Maecenas eget tristique dui. Aenean id urna pharetra, sollicitudin velit quis, varius erat. Quisque sed justo lobortis, volutpat eros in, viverra erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac magna eget massa tristique elementum. Mauris quis nisl id nisl maximus elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer urna tortor, sodales in lacus in, condimentum varius nulla. Phasellus faucibus felis nec augue dictum, sit amet condimentum dui pulvinar. Praesent nec suscipit arcu, ut aliquet erat. Maecenas sollicitudin porta elit eget fringilla. Pellentesque venenatis tortor dignissim diam malesuada condimentum.</p>
+<p>Suspendisse interdum neque quis diam luctus lobortis. Etiam condimentum et tortor eu volutpat. Pellentesque at congue metus. Pellentesque blandit bibendum dolor sit amet vulputate. Aliquam nunc dolor, condimentum sit amet dapibus vitae, faucibus in lorem. Aliquam fringilla tincidunt metus. Etiam ultrices nulla vel purus gravida, non pharetra ipsum auctor. Mauris suscipit mauris vitae facilisis tempus. Praesent laoreet purus vitae est pharetra lacinia. Nullam sodales eu eros et placerat. Vestibulum quis mattis lacus, a facilisis turpis. Nulla non volutpat nisi. Sed tincidunt luctus nisi. Ut vel purus tortor.</p>
+<p>Quisque facilisis consectetur augue id sodales. Aliquam interdum scelerisque tortor quis hendrerit. In laoreet convallis urna, et auctor arcu varius quis. Nullam consequat dolor nec malesuada eleifend. Quisque egestas purus vel lorem scelerisque, et tincidunt sapien volutpat. Sed nec scelerisque neque, ut molestie velit. Mauris vitae tristique ex. Nunc lacinia justo eros, eget gravida ante fermentum ut. Morbi at porttitor quam, non imperdiet tellus.</p>]]>
+    </content>
+    <link href="https://cecilapp.github.io/theme-applanding/blog/post-2/" rel="alternate" type="text/html" />
+    <published>2022-09-02T00:00:00+00:00</published>
+    <updated>2022-12-07T22:10:49+00:00</updated>
+  </entry>
+  <entry xml:lang="en">
+    <id>https://cecilapp.github.io/theme-applanding/blog/post-1/</id>
+    <title>Post 1</title>
+    <content type="html">
+      <![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus non enim sed maximus. Phasellus in accumsan nibh, at mollis nibh. Nunc id leo venenatis, pellentesque odio sit amet, lobortis augue. Sed hendrerit vulputate quam, quis dictum est molestie ac. In convallis urna sit amet dolor semper vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<!-- break -->
+<p>Fusce ut sodales risus, ut dictum libero. Aliquam erat volutpat. Mauris malesuada consequat ultrices. Duis vulputate eget tellus aliquam aliquam. Proin vulputate mi vitae neque ornare, ac convallis odio venenatis. Suspendisse nec tempus felis. Nunc eget tincidunt nibh, nec varius turpis. Vivamus ullamcorper nisi sed molestie mollis.</p>
+<p>Donec facilisis consequat urna, quis semper nisi ultrices vitae. Etiam malesuada ligula in accumsan posuere. Morbi ac ante consequat, vulputate nibh et, malesuada orci. Maecenas eget tristique dui. Aenean id urna pharetra, sollicitudin velit quis, varius erat. Quisque sed justo lobortis, volutpat eros in, viverra erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac magna eget massa tristique elementum. Mauris quis nisl id nisl maximus elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer urna tortor, sodales in lacus in, condimentum varius nulla. Phasellus faucibus felis nec augue dictum, sit amet condimentum dui pulvinar. Praesent nec suscipit arcu, ut aliquet erat. Maecenas sollicitudin porta elit eget fringilla. Pellentesque venenatis tortor dignissim diam malesuada condimentum.</p>
+<p>Suspendisse interdum neque quis diam luctus lobortis. Etiam condimentum et tortor eu volutpat. Pellentesque at congue metus. Pellentesque blandit bibendum dolor sit amet vulputate. Aliquam nunc dolor, condimentum sit amet dapibus vitae, faucibus in lorem. Aliquam fringilla tincidunt metus. Etiam ultrices nulla vel purus gravida, non pharetra ipsum auctor. Mauris suscipit mauris vitae facilisis tempus. Praesent laoreet purus vitae est pharetra lacinia. Nullam sodales eu eros et placerat. Vestibulum quis mattis lacus, a facilisis turpis. Nulla non volutpat nisi. Sed tincidunt luctus nisi. Ut vel purus tortor.</p>
+<p>Quisque facilisis consectetur augue id sodales. Aliquam interdum scelerisque tortor quis hendrerit. In laoreet convallis urna, et auctor arcu varius quis. Nullam consequat dolor nec malesuada eleifend. Quisque egestas purus vel lorem scelerisque, et tincidunt sapien volutpat. Sed nec scelerisque neque, ut molestie velit. Mauris vitae tristique ex. Nunc lacinia justo eros, eget gravida ante fermentum ut. Morbi at porttitor quam, non imperdiet tellus.</p>]]>
+    </content>
+    <link href="https://cecilapp.github.io/theme-applanding/blog/post-1/" rel="alternate" type="text/html" />
+    <published>2022-09-01T00:00:00+00:00</published>
+    <updated>2022-12-07T22:10:49+00:00</updated>
+  </entry>
+</feed>
