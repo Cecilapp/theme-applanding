@@ -33,6 +33,19 @@ jobs:
         echo -e "theme:\n  - applanding" >> demo/config.yml
         rm -rf demo/layouts
 
+    - name: Add Tailwind config
+      run: |
+        cat <<EOT >> tailwind.config.js
+module.exports = {
+  presets: [
+    require('./themes/applanding/tailwind.config.js')
+  ]
+}
+EOT
+
+    - name: Build CSS
+      run: npx tailwindcss -i ./themes/applanding/tailwind.css -o ./assets/styles.css
+
     - name: Build
       run: php cecil.phar build -vv demo
 
