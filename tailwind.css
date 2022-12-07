@@ -15,7 +15,7 @@
     @apply mb-3;
   }
   a:hover {
-     @apply underline;
+    @apply underline;
   }
 }
 
