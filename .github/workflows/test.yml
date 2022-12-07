@@ -35,13 +35,13 @@ jobs:
 
     - name: Add Tailwind config
       run: |
-        cat <<EOT >> tailwind.config.js
-module.exports = {
-  presets: [
-    require('./themes/applanding/tailwind.config.js')
-  ]
-}
-EOT
+          cat > ./tailwind.config.js <<EOF
+            module.exports = {
+              presets: [
+                require('./themes/applanding/tailwind.config.js')
+              ]
+            }
+          EOF
 
     - name: Build CSS
       run: npx tailwindcss -i ./themes/applanding/tailwind.css -o ./assets/styles.css
