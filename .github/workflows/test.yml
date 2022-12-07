@@ -60,6 +60,7 @@ jobs:
     - name: Build CSS
       run: |
         cd ./demo
+        npm install tailwindcss@lastest
         npx tailwindcss -i ./themes/applanding/tailwind.css -o ./assets/styles.css
         cd ..
 
