@@ -44,7 +44,7 @@ jobs:
           source: https://github.com/Cecilapp/the-butler
           documentation: https://github.com/Cecilapp/the-butler#readme
           demo: https://the-butler-demo.cecil.app
-          #screenshot: cecil-preview.png
+          screenshot: https://the-butler.cecil.app/cecil-preview.png
         EOF
 
     - name: Add Tailwind config
