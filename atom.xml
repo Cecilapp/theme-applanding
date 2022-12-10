@@ -6,7 +6,7 @@
   <subtitle><![CDATA[Site description]]></subtitle>
   <link href="https://cecilapp.github.io/theme-applanding/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://cecilapp.github.io/theme-applanding/" rel="alternate" type="text/html" />
-  <updated>2022-12-07T23:40:43+00:00</updated>
+  <updated>2022-12-10T00:59:42+00:00</updated>
   <author>
     <name>Arnaud Ligny</name>
     <uri>https://arnaudligny.fr</uri>
@@ -20,8 +20,8 @@
 <p><a href="../">back</a></p>]]>
     </content>
     <link href="https://cecilapp.github.io/theme-applanding/about/" rel="alternate" type="text/html" />
-    <published>2022-12-07T23:40:43+00:00</published>
-    <updated>2022-12-07T23:40:43+00:00</updated>
+    <published>2022-12-10T00:59:42+00:00</published>
+    <updated>2022-12-10T00:59:42+00:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://cecilapp.github.io/theme-applanding/markdown/</id>
@@ -141,8 +141,8 @@ Cecil::create(
 <pre><code class="language-text">The final element.</code></pre>]]>
     </content>
     <link href="https://cecilapp.github.io/theme-applanding/markdown/" rel="alternate" type="text/html" />
-    <published>2022-12-07T23:40:43+00:00</published>
-    <updated>2022-12-07T23:40:43+00:00</updated>
+    <published>2022-12-10T00:59:42+00:00</published>
+    <updated>2022-12-10T00:59:42+00:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://cecilapp.github.io/theme-applanding/blog/post-6/</id>
@@ -157,7 +157,7 @@ Cecil::create(
     </content>
     <link href="https://cecilapp.github.io/theme-applanding/blog/post-6/" rel="alternate" type="text/html" />
     <published>2022-09-06T00:00:00+00:00</published>
-    <updated>2022-12-07T23:40:43+00:00</updated>
+    <updated>2022-12-10T00:59:42+00:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://cecilapp.github.io/theme-applanding/blog/post-5/</id>
@@ -172,7 +172,7 @@ Cecil::create(
     </content>
     <link href="https://cecilapp.github.io/theme-applanding/blog/post-5/" rel="alternate" type="text/html" />
     <published>2022-09-05T00:00:00+00:00</published>
-    <updated>2022-12-07T23:40:43+00:00</updated>
+    <updated>2022-12-10T00:59:42+00:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://cecilapp.github.io/theme-applanding/blog/post-4/</id>
@@ -187,7 +187,7 @@ Cecil::create(
     </content>
     <link href="https://cecilapp.github.io/theme-applanding/blog/post-4/" rel="alternate" type="text/html" />
     <published>2022-09-04T00:00:00+00:00</published>
-    <updated>2022-12-07T23:40:43+00:00</updated>
+    <updated>2022-12-10T00:59:42+00:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://cecilapp.github.io/theme-applanding/blog/post-3/</id>
@@ -202,7 +202,7 @@ Cecil::create(
     </content>
     <link href="https://cecilapp.github.io/theme-applanding/blog/post-3/" rel="alternate" type="text/html" />
     <published>2022-09-03T00:00:00+00:00</published>
-    <updated>2022-12-07T23:40:43+00:00</updated>
+    <updated>2022-12-10T00:59:42+00:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://cecilapp.github.io/theme-applanding/blog/post-2/</id>
@@ -217,7 +217,7 @@ Cecil::create(
     </content>
     <link href="https://cecilapp.github.io/theme-applanding/blog/post-2/" rel="alternate" type="text/html" />
     <published>2022-09-02T00:00:00+00:00</published>
-    <updated>2022-12-07T23:40:43+00:00</updated>
+    <updated>2022-12-10T00:59:42+00:00</updated>
   </entry>
   <entry xml:lang="en">
     <id>https://cecilapp.github.io/theme-applanding/blog/post-1/</id>
@@ -232,6 +232,6 @@ Cecil::create(
     </content>
     <link href="https://cecilapp.github.io/theme-applanding/blog/post-1/" rel="alternate" type="text/html" />
     <published>2022-09-01T00:00:00+00:00</published>
-    <updated>2022-12-07T23:40:43+00:00</updated>
+    <updated>2022-12-10T00:59:42+00:00</updated>
   </entry>
 </feed>
