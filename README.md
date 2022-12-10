@@ -54,6 +54,7 @@ module.exports = {
 Run the following command:
 
 ```bash
+npm install -D tailwindcss
 npx tailwindcss -i ./themes/applanding/tailwind.css -o ./assets/styles.css
 ```
 
