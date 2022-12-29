@@ -31,11 +31,11 @@ jobs:
           php cecil.phar new:site
           rm ./pages/index.md
           cat > ./pages/index.md <<EOF
-            ---
-            title: App Landing theme
-            ---
-            This a demo of the _App Landing_ theme.
-            EOF
+          ---
+          title: App Landing theme
+          ---
+          This a demo of the _App Landing_ theme.
+          EOF
 
       - name: Install theme
         uses: actions/checkout@master
@@ -63,17 +63,17 @@ jobs:
 
       - name: Add Tailwind config
         run: |
-            cat > ./tailwind.config.js <<EOF
-            module.exports = {
-              presets: [
-                require('./themes/applanding/tailwind.preset.js')
-              ],
-              content: [
-                './layouts/**/*.html.twig',
-                './themes/**/layouts/**/*.html.twig',
-              ]
-            }
-            EOF
+          cat > ./tailwind.config.js <<EOF
+          module.exports = {
+            presets: [
+              require('./themes/applanding/tailwind.preset.js')
+            ],
+            content: [
+              './layouts/**/*.html.twig',
+              './themes/**/layouts/**/*.html.twig',
+            ]
+          }
+          EOF
 
       - name: Build CSS with Tailwind
         run: |
