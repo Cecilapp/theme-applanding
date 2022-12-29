@@ -27,7 +27,9 @@ jobs:
           php cecil.phar --version
 
       - name: Create site
-        run: php cecil.phar new:site
+        run: |
+          php cecil.phar new:site
+          rm ./pages/index.md
 
       - name: Install theme
         uses: actions/checkout@master
