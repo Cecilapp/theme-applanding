@@ -72,10 +72,10 @@ jobs:
           npm install -D tailwindcss
           npx tailwindcss -i ./themes/applanding/tailwind.css -o ./assets/styles.css
 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: debug
-          path: ./
+      #- uses: actions/upload-artifact@v3
+      #  with:
+      #    name: debug
+      #    path: ./
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
