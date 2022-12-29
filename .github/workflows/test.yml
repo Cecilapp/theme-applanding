@@ -30,6 +30,12 @@ jobs:
         run: |
           php cecil.phar new:site
           rm ./pages/index.md
+          cat > ./pages/index.md <<EOF
+            ---
+            title: App Landing theme
+            ---
+            This a demo of the _App Landing_ theme.
+            EOF
 
       - name: Install theme
         uses: actions/checkout@master
