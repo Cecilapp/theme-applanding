@@ -34,7 +34,7 @@ jobs:
           ---
           title: App Landing theme
           ---
-          This a demo of the _App Landing_ theme.
+          This is a demo of the _App Landing_ theme.
           EOF
 
       - name: Install theme
