@@ -1,4 +1,4 @@
-name: Test
+name: Build site and deploy it to GitHub Pages
 
 on:
   push:
@@ -26,22 +26,22 @@ jobs:
           curl -sSOL https://cecil.app/cecil.phar
           php cecil.phar --version
 
-      - name: Create demo site
-        run: php cecil.phar new:site demo
+      - name: Create site
+        run: php cecil.phar new:site
 
       - name: Install theme
         uses: actions/checkout@master
         with:
-          path: ./demo/themes/applanding
+          path: ./themes/applanding
 
       - name: Add theme to configuration file
         run: |
-          echo -e "theme:\n  - applanding" >> ./demo/config.yml
-          rm -rf ./demo/layouts
+          echo -e "theme:\n  - applanding" >> ./config.yml
+          rm -rf ./layouts
 
       - name: Add theme config
         run: |
-          cat >> ./demo/config.yml <<EOF
+          cat >> ./config.yml <<EOF
           applanding:
             buttons:
               - name: Netlify
@@ -55,7 +55,7 @@ jobs:
 
       - name: Add Tailwind config
         run: |
-            cat > ./demo/tailwind.config.js <<EOF
+            cat > ./tailwind.config.js <<EOF
             module.exports = {
               presets: [
                 require('./themes/applanding/tailwind.config.js')
@@ -65,16 +65,14 @@ jobs:
 
       - name: Build CSS with Tailwind
         run: |
-          cd ./demo
           npm install -D tailwindcss
           npx tailwindcss -i ./themes/applanding/tailwind.css -o ./assets/styles.css
-          cd ..
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
 
-      - name: Build demo site
-        run: php cecil.phar build -vv demo
+      - name: Build site
+        run: php cecil.phar build -vv
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
