@@ -2,18 +2,24 @@ name: Test
 
 on:
   push:
+    branches: [master]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  test-theme:
-    name: Test theme
+  build:
     runs-on: ubuntu-latest
     env:
       CECIL_BASEURL: https://cecilapp.github.io/theme-applanding/
       CECIL_CANONICALURL: true
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy_url.outputs.url }}
     steps:
     - name: Download Cecil
       run: |
@@ -28,7 +34,7 @@ jobs:
       with:
         path: ./demo/themes/applanding
 
-    - name: Add theme
+    - name: Add theme to configuration file
       run: |
         echo -e "theme:\n  - applanding" >> ./demo/config.yml
         rm -rf ./demo/layouts
@@ -57,25 +63,23 @@ jobs:
           }
           EOF
 
-    - name: Build CSS
+    - name: Build CSS with Tailwind
       run: |
         cd ./demo
         npm install -D tailwindcss
         npx tailwindcss -i ./themes/applanding/tailwind.css -o ./assets/styles.css
         cd ..
 
-    - name: Build
+    - name: Build demo site
       run: php cecil.phar build -vv demo
-
-    - name: Deploy
-      uses: Cecilapp/GitHub-Pages-deploy@v3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        email: arnaud@ligny.org
-        build_dir: demo/_site
-
-    - name: Deploy URL
-      if: ${{ success() }}
-      id: deploy_url
-      run: echo "::set-output name=url::$CECIL_BASEURL"
+      
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
