@@ -28,7 +28,7 @@ jobs:
 
       - name: Create site
         run: |
-          php cecil.phar new:site
+          php cecil.phar new:site -n
           rm ./pages/index.md
           cat > ./pages/index.md <<EOF
           ---
