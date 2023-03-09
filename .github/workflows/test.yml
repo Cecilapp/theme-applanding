@@ -37,6 +37,10 @@ jobs:
           This is a demo of the _App Landing_ theme.
           EOF
 
+      - name: Add baseline to configuration file
+        run: |
+          echo -e "baseline: Amazing baseline here" >> ./config.yml
+
       - name: Install theme
         uses: actions/checkout@master
         with:
