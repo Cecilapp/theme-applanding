@@ -3,9 +3,9 @@
         {%- block content ~%}
         {#- Left Col ~#}
         <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-          <h1 class="leading-tight text-center md:text-left slide-in-bottom-h1">{{ site.baseline }}</h1>
-          <div class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">{{ page.content }}</div>
-          <div class="flex w-full justify-center md:justify-start fade-in">
+          <h1 id="baseline" class="leading-tight text-center md:text-left slide-in-bottom-h1">{{ site.baseline }}</h1>
+          <div id="content" class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">{{ page.content }}</div>
+          <div id="buttons" class="flex w-full justify-center md:justify-start fade-in">
           {%- for button in site.applanding.buttons ~%}
             <a href="{{ button.url }}">
               {%- set class = 'md:h-12 w-full bounce-top-icons' -%}
@@ -16,7 +16,7 @@
             </a>
           {%- endfor ~%}
           </div>
-          <ul class="fade-in">
+          <ul id="links" class="fade-in">
           {%- for link in ['source', 'documentation', 'demo'] ~%}
             {%- if attribute(site.applanding, link) is defined ~%}
             <li class="flex items-center mt-2 justify-center md:justify-start">

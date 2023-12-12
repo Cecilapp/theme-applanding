@@ -1,9 +1,7 @@
-/* Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Base styles */
 @layer base {
   h1 {
     @apply mb-4 text-3xl md:text-5xl font-bold;
@@ -15,6 +13,9 @@
     @apply mb-3;
   }
   a:hover {
+    @apply underline;
+  }
+  #content a {
     @apply underline;
   }
 }
