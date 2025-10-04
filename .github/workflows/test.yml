@@ -38,7 +38,7 @@ jobs:
           EOF
 
       - name: Install theme
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: ./themes/applanding
 
@@ -77,8 +77,8 @@ jobs:
 
       - name: Build CSS with Tailwind
         run: |
-          npm install -D tailwindcss
-          npx tailwindcss -i ./themes/applanding/tailwind.css -o ./assets/styles.css
+          npm install tailwindcss @tailwindcss/cli
+          npm run css:build
 
       #- uses: actions/upload-artifact@v3
       #  with:
@@ -92,7 +92,7 @@ jobs:
         run: php cecil.phar build -vv
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
 
   deploy:
     environment:
