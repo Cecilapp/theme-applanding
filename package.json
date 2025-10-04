@@ -1,6 +1,10 @@
 {
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.14",
-    "tailwindcss": "^4.1.14"
+  "name": "theme-applanding",
+  "devDependencies": {
+    "tailwindcss": "^4.1"
+  },
+  "scripts": {
+    "css:build": "npx @tailwindcss/cli -i ./assets/tailwind.css -o ./assets/styles.css",
+    "css:watch": "npx @tailwindcss/cli -i ./assets/tailwind.css -o ./assets/styles.css --watch"
   }
 }
