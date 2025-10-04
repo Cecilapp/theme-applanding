@@ -41,25 +41,10 @@ applanding:
 
 ### Build the CSS
 
-Create the Tailwind configuration file `tailwind.config.js`:
-
-```javascript
-module.exports = {
-  presets: [
-    require('./themes/applanding/tailwind.preset.js')
-  ],
-  content: [
-    './layouts/**/*.html.twig',
-    './themes/**/layouts/**/*.html.twig',
-  ]
-}
-```
-
-Run the following command:
+Run the following command to build the CSS file:
 
 ```bash
-npm install -D tailwindcss
-npx tailwindcss -i ./themes/applanding/tailwind.css -o ./assets/styles.css
+npm run css:build
 ```
 
 ## License
