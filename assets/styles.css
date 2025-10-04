@@ -213,9 +213,6 @@
   .block {
     display: block;
   }
-  .contents {
-    display: contents;
-  }
   .flex {
     display: flex;
   }
@@ -462,17 +459,17 @@
     }
   }
   .dark\:bg-slate-900 {
-    &:where(.dark, .dark *) {
+    @media (prefers-color-scheme: dark) {
       background-color: var(--color-slate-900);
     }
   }
   .dark\:text-slate-300 {
-    &:where(.dark, .dark *) {
+    @media (prefers-color-scheme: dark) {
       color: var(--color-slate-300);
     }
   }
   .dark\:hover\:text-slate-100 {
-    &:where(.dark, .dark *) {
+    @media (prefers-color-scheme: dark) {
       &:hover {
         @media (hover: hover) {
           color: var(--color-slate-100);
