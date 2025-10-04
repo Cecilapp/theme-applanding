@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {%~ include 'partials/metatags.html.twig' ~%}
+    {%- include 'partials/metatags.html.twig' ~%}
     <style>
       {{- asset('styles.css')|inline -}}
     </style>
   </head>
   <body class="leading-normal tracking-normal text-slate-900 dark:text-slate-300 dark:bg-slate-900">
     <div class="h-screen pb-14">
-      {#- Nav ~#}
+      {#- nav ~#}
       <div class="w-full container mx-auto p-6">
         <div class="w-full flex items-center justify-between">
-          {#- Title ~#}
+          {#- title ~#}
           <a class="flex items-center no-underline hover:no-underline font-serif font-bold text-2xl lg:text-4xl" href="{{ url() }}">
             {{ site.title }}
           </a>
-          {#- Links ~#}
+          {#- links ~#}
           <div class="flex w-1/4 justify-end content-center fade-in">
             <a class="inline-block no-underline hover:text-slate-700 dark:hover:text-slate-100 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4" href="{{ site.applanding.source }}">
               <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" aria-labelledby="github">
@@ -29,12 +29,12 @@
           </div>
         </div>
       </div>
-      {#- Main ~#}
+      {#- main ~#}
       <div class="container pt-16 md:pt-28 lg:pt-40 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-start">
         {%- block content ~%}
         {{ page.content }}
         {%- endblock ~%}
-        {#- Footer ~#}
+        {#- footer ~#}
         <div class="w-full pb-6 lg:pt-6 xl:pt-16 text-sm text-center md:text-left fade-in">
           <a class="text-slate-700 dark:text-slate-300 no-underline hover:no-underline" href="{{ cecil.url }}">{% trans with {'%powered_by%': 'Cecil'} %}Powered by %powered_by%{% endtrans %}</a>
         </div>
