@@ -61,10 +61,10 @@ jobs:
             screenshot: https://the-butler.cecil.app/cecil-preview.e39f27ed3641fa0022e6ee1711472086.png
           EOF
 
-      - name: Build CSS with Tailwind
-        run: |
-          npm install tailwindcss @tailwindcss/cli
-          npm run css:build
+      #- name: Build CSS with Tailwind
+      #  run: |
+      #    npm install tailwindcss @tailwindcss/cli
+      #    npm run css:build
 
       #- uses: actions/upload-artifact@v3
       #  with:
