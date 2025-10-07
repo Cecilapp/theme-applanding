@@ -44,7 +44,7 @@ jobs:
 
       - name: Add baseline to configuration file
         run: |
-          echo -e "baseline: App Landing theme demo" >> ./config.yml
+          echo -e "baseline: App Landing theme" >> ./config.yml
 
       - name: Add theme to configuration file
         run: |
