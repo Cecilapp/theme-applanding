@@ -42,9 +42,9 @@ jobs:
         with:
           path: ./themes/applanding
 
-      - name: Add title to configuration file
+      - name: Add baseline to configuration file
         run: |
-          echo -e "title: App Landing theme demo" >> ./config.yml
+          echo -e "baseline: App Landing theme demo" >> ./config.yml
 
       - name: Add theme to configuration file
         run: |
