@@ -3,8 +3,8 @@
         {%- block content ~%}
         {#- left Col ~#}
         <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-          <h1 id="baseline" class="leading-tight text-center md:text-left slide-in-bottom-h1">{{ site.baseline }}</h1>
-          <div id="content" class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">{{ page.content }}</div>
+          <h1 id="baseline" class="leading-tight text-center md:text-left">{{ site.baseline }}</h1>
+          <div id="content" class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">{{ page.content }}</div>
           <div id="buttons" class="flex w-full justify-center md:justify-start fade-in">
           {%- for button in site.applanding.buttons ~%}
             <a href="{{ button.url }}">

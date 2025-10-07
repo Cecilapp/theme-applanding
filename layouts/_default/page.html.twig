@@ -15,11 +15,18 @@
       <div class="w-full container mx-auto p-6">
         <div class="w-full flex items-center justify-between">
           {#- title ~#}
-          <a class="flex items-center no-underline hover:no-underline font-serif font-bold text-2xl lg:text-4xl" href="{{ url() }}">
+          <div class="fade-in">
+            {%- if page.type == 'homepage' ~%}
             {{ site.title }}
-          </a>
+            {%- else ~%}
+            <a class="flex items-center no-underline hover:no-underline font-serif font-bold text-2xl lg:text-4xl" href="{{ url() }}">
+              {{ site.title }}
+            </a>
+            {%- endif ~%}
+          </div>
           {#- links ~#}
           <div class="flex w-1/4 justify-end content-center fade-in">
+            {#- GitHub ~#}
             <a class="inline-block no-underline hover:text-slate-700 dark:hover:text-slate-100 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4" href="{{ site.applanding.source }}">
               <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" aria-labelledby="github">
                 <title id="github" lang="{{ site.language }}">GitHub</title>

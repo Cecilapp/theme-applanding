@@ -508,14 +508,6 @@
   -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25,.46,0.45,.94) both;
   animation: slide-in-bottom 0.5s cubic-bezier(0.25,.46,0.45,.94) both;
 }
-.slide-in-bottom-h1 {
-  -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25,.46,0.45,.94) 0.5s both;
-  animation: slide-in-bottom 0.5s cubic-bezier(0.25,.46,0.45,.94) 0.5s both;
-}
-.slide-in-bottom-subtitle {
-  -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25,.46,0.45,.94) 0.75s both;
-  animation: slide-in-bottom 0.5s cubic-bezier(0.25,.46,0.45,.94) 0.75s both;
-}
 .fade-in {
   -webkit-animation: fade-in 1.2s cubic-bezier(0.39,.575,0.565,1.000) 1s both;
   animation: fade-in 1.2s cubic-bezier(0.39,.575,0.565,1.000) 1s both;
