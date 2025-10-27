@@ -34,7 +34,7 @@
           {%- if site.applanding.demo is defined ~%}
           <a href="{{ site.applanding.demo }}" title="{% trans %}Go to the demo{% endtrans %}">
           {%- endif ~%}
-            {%- set img_class = 'w-5/6 mx-auto lg:mr-0 slide-in-bottom' -%}
+            {%- set img_class = 'mx-auto lg:mr-0 slide-in-bottom' -%}
             {%- set img_sizes = image_sizes(img_class) -%}
             {%- if site.applanding.screenshot.mobile is defined or site.applanding.screenshot.mobile.light is defined -%}
               {%- set screenshot_mobile = asset(site.applanding.screenshot.mobile.light|default(site.applanding.screenshot.mobile)) -%}
