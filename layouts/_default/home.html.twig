@@ -1,0 +1,64 @@
+{% extends ['page.html.twig', '_default/page.html.twig'] %}
+
+        {%- block content ~%}
+
+        <div class="flex flex-col lg:flex-row space-x-0 space-y-6 lg:space-x-6 lg:space-y-0">
+          {#- text ~#}
+          <div class="basis-1/2">
+            <h1 id="baseline" class="leading-tight text-center md:text-left">{{ site.baseline }}</h1>
+            <div id="content" class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">{{ page.content }}</div>
+            <div id="buttons" class="flex w-full justify-center md:justify-start fade-in">
+            {%- for button in site.applanding.buttons ~%}
+              <a href="{{ button.url }}">
+                {%- set class = 'md:h-12 w-full bounce-top-icons' -%}
+                {%- if not loop.last -%}
+                  {%- set class = class ~ ' pr-4' -%}
+                {%- endif ~%}
+                {{ asset(button.image)|html({class, alt: button.name ~ ' button'}) }}
+              </a>
+            {%- endfor ~%}
+            </div>
+            <ul id="links" class="mt-4 fade-in">
+            {%- for link in ['source', 'documentation', 'demo'] ~%}
+              {%- if attribute(site.applanding, link) is defined ~%}
+              <li class="flex items-center mt-2 justify-center md:justify-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <a href="{{ attribute(site.applanding, link) }}" class="font-medium">{{ link|trans }}</a>
+              </li>
+              {%- endif ~%}
+            {%- endfor ~%}
+            </ul>
+          </div>
+          {#- image ~#}
+          <div class="basis-1/2">
+            {%- if site.applanding.demo is defined ~%}
+            <a href="{{ site.applanding.demo }}" title="{% trans %}Go to the demo{% endtrans %}">
+            {%- endif ~%}
+              {%- set img_class = 'mx-auto lg:mr-0 slide-in-bottom' -%}
+              {%- set img_sizes = image_sizes(img_class) -%}
+              {%- if site.applanding.screenshot.mobile is defined or site.applanding.screenshot.mobile.light is defined -%}
+                {%- set screenshot_mobile = asset(site.applanding.screenshot.mobile.light|default(site.applanding.screenshot.mobile)) -%}
+                {%- set screenshot_mobile_dark = asset(site.applanding.screenshot.mobile.dark|default(site.applanding.screenshot.mobile.light|default(site.applanding.screenshot.mobile))) ~%}
+              <picture class="md:hidden">
+                <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="{{ image_srcset(screenshot_mobile_dark|webp) }}" sizes="{{ img_sizes }}">
+                <source media="(prefers-color-scheme: dark)" type="{{ screenshot_mobile_dark.subtype }}" srcset="{{ image_srcset(screenshot_mobile_dark) }}" sizes="{{ img_sizes }}">
+                <source type="image/webp" srcset="{{ image_srcset(screenshot_mobile|webp) }}" sizes="{{ img_sizes }}">
+                <img src="{{ screenshot_mobile|url }}" width="{{ screenshot_mobile.width }}" height="{{ screenshot_mobile.height }}" alt="{% trans %}Screenshot{% endtrans %}" class="{{ img_class }}" srcset="{{ image_srcset(screenshot_mobile) }}" sizes="{{ img_sizes }}">
+              </picture>
+              {%- endif -%}
+              {%- set screenshot_desktop = asset(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot.desktop|default(site.applanding.screenshot))) -%}
+              {%- set screenshot_desktop_dark = asset(site.applanding.screenshot.desktop.dark|default(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot.desktop|default(site.applanding.screenshot)))) ~%}
+              <picture class="{% if site.applanding.screenshot.mobile is defined or site.applanding.screenshot.mobile.light is defined %}hidden {% endif %}md:block">
+                <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="{{ image_srcset(screenshot_desktop_dark|webp) }}" sizes="{{ img_sizes }}">
+                <source media="(prefers-color-scheme: dark)" type="{{ screenshot_desktop_dark.subtype }}" srcset="{{ image_srcset(screenshot_desktop_dark) }}" sizes="{{ img_sizes }}">
+                <source type="image/webp" srcset="{{ image_srcset(screenshot_desktop|webp) }}" sizes="{{ img_sizes }}">
+                <img src="{{ screenshot_desktop|url }}" width="{{ screenshot_desktop.width }}" height="{{ screenshot_desktop.height }}" alt="{% trans %}Screenshot{% endtrans %}" class="{{ img_class }}" srcset="{{ image_srcset(screenshot_desktop) }}" sizes="{{ img_sizes }}">
+              </picture>
+            {%- if site.applanding.demo is defined ~%}
+            </a>
+            {%- endif ~%}
+          </div>
+        </div>
+        {%- endblock ~%}
