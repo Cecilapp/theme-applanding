@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {%- include 'partials/metatags.html.twig' ~%}
     <style>
-      {{- asset('styles.css')|inline -}}
+      {{ asset('styles.css')|inline ~}}
     </style>
   </head>
   <body class="leading-normal tracking-normal text-slate-900 dark:text-slate-300 dark:bg-slate-900">
-    <div class="container mx-auto">
-      <header class="p-6">
+    <div class="container mx-auto px-6 py-6">
+      <header class="mb-8">
         <div class="flex items-center justify-between">
           {#- title ~#}
-          <div class="fade-in">
+          <div class="fade-in no-underline hover:no-underline font-serif font-bold text-xl lg:text-2xl">
             {%- if page.type == 'homepage' ~%}
             {{ site.title }}
             {%- else ~%}
-            <a class="flex items-center no-underline hover:no-underline font-serif font-bold text-2xl lg:text-4xl" href="{{ url() }}">
+            <a href="{{ url(site.home) }}">
               {{ site.title }}
             </a>
             {%- endif ~%}
@@ -40,12 +40,16 @@
           </div>
         </div>
       </header>
-      <main class="mx-auto flex flex-wrap flex-col md:flex-row items-start px-6 py-6 md:pt-24">
-        {%- block content ~%}
-        {{ page.content }}
-        {%- endblock content ~%}
+      <main class="flex flex-col min-h-[calc(100svh-10rem)]">
+        {%- block main ~%}
+        <article>
+          {%- block content ~%}
+          {{ page.content }}
+          {%- endblock content ~%}
+        </article>
+        {%- endblock main ~%}
       </main>
-      <footer class="px-6 py-6 text-sm text-center md:text-left fade-in">
+      <footer class="mt-6 text-sm text-center md:text-left fade-in">
         {%- block footer ~%}
         <a class="text-slate-700 dark:text-slate-300 no-underline hover:no-underline" href="{{ cecil.url }}">{% trans with {'%powered_by%': 'Cecil'} %}Powered by %powered_by%{% endtrans %}</a>
         {%- endblock footer ~%}
