@@ -38,7 +38,7 @@ jobs:
           EOF
 
       - name: Install theme
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           path: ./themes/applanding
 
@@ -70,7 +70,7 @@ jobs:
       #    npm install tailwindcss @tailwindcss/cli
       #    npm run css:build
 
-      #- uses: actions/upload-artifact@v3
+      #- uses: actions/upload-artifact@v6
       #  with:
       #    name: debug
       #    path: ./
