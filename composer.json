@@ -19,5 +19,12 @@
     "allow-plugins": {
       "cecil/theme-installer": true
     }
+  },
+  "require-dev": {
+    "aligny/tailwind-builder": "^1.2"
+  },
+  "scripts": {
+    "css:build": "tailwind-builder assets/tailwind.css --output=assets/styles.css --minify",
+    "css:watch": "tailwind-builder assets/tailwind.css --output=assets/styles.css --watch"
   }
 }

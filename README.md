@@ -44,7 +44,8 @@ applanding:
 Run the following command to build the CSS file:
 
 ```bash
-npm run css:build
+composer install
+composer css:build
 ```
 
 ## License
