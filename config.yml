@@ -1,0 +1,3 @@
+layouts:
+  images:
+    dark_suffix: .dark # dark variant of an image: `screenshot.dark.png` alongside `screenshot.png`

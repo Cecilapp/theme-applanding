@@ -35,26 +35,13 @@
             {%- if site.applanding.demo is defined ~%}
             <a href="{{ site.applanding.demo }}" title="{% trans %}Go to the demo{% endtrans %}">
             {%- endif ~%}
+              {%- set screenshot = site.applanding.screenshot -%}
               {%- set img_class = 'mx-auto lg:mr-0 slide-in-bottom' -%}
-              {%- set img_sizes = image_sizes(img_class) -%}
-              {%- if site.applanding.screenshot.mobile is defined or site.applanding.screenshot.mobile.light is defined -%}
-                {%- set screenshot_mobile = asset(site.applanding.screenshot.mobile.light|default(site.applanding.screenshot.mobile)) -%}
-                {%- set screenshot_mobile_dark = asset(site.applanding.screenshot.mobile.dark|default(site.applanding.screenshot.mobile.light|default(site.applanding.screenshot.mobile))) ~%}
-              <picture class="md:hidden">
-                <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="{{ image_srcset(screenshot_mobile_dark|webp) }}" sizes="{{ img_sizes }}">
-                <source media="(prefers-color-scheme: dark)" type="{{ screenshot_mobile_dark.subtype }}" srcset="{{ image_srcset(screenshot_mobile_dark) }}" sizes="{{ img_sizes }}">
-                <source type="image/webp" srcset="{{ image_srcset(screenshot_mobile|webp) }}" sizes="{{ img_sizes }}">
-                <img src="{{ screenshot_mobile|url }}" width="{{ screenshot_mobile.width }}" height="{{ screenshot_mobile.height }}" alt="{% trans %}Screenshot{% endtrans %}" class="{{ img_class }}" srcset="{{ image_srcset(screenshot_mobile) }}" sizes="{{ img_sizes }}">
-              </picture>
-              {%- endif -%}
-              {%- set screenshot_desktop = asset(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot.desktop|default(site.applanding.screenshot))) -%}
-              {%- set screenshot_desktop_dark = asset(site.applanding.screenshot.desktop.dark|default(site.applanding.screenshot.desktop.light|default(site.applanding.screenshot.desktop|default(site.applanding.screenshot)))) ~%}
-              <picture class="{% if site.applanding.screenshot.mobile is defined or site.applanding.screenshot.mobile.light is defined %}hidden {% endif %}md:block">
-                <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="{{ image_srcset(screenshot_desktop_dark|webp) }}" sizes="{{ img_sizes }}">
-                <source media="(prefers-color-scheme: dark)" type="{{ screenshot_desktop_dark.subtype }}" srcset="{{ image_srcset(screenshot_desktop_dark) }}" sizes="{{ img_sizes }}">
-                <source type="image/webp" srcset="{{ image_srcset(screenshot_desktop|webp) }}" sizes="{{ img_sizes }}">
-                <img src="{{ screenshot_desktop|url }}" width="{{ screenshot_desktop.width }}" height="{{ screenshot_desktop.height }}" alt="{% trans %}Screenshot{% endtrans %}" class="{{ img_class }}" srcset="{{ image_srcset(screenshot_desktop) }}" sizes="{{ img_sizes }}">
-              </picture>
+              {%- set img_options = {formats: ['webp'], responsive: true} -%}
+              {%- if screenshot.mobile is defined ~%}
+              {{ asset(screenshot.mobile)|html({class: img_class ~ ' md:hidden', alt: 'Screenshot'|trans}, img_options) }}
+              {%- endif ~%}
+              {{ asset(screenshot.desktop|default(screenshot))|html({class: img_class ~ (screenshot.mobile is defined ? ' hidden md:block'), alt: 'Screenshot'|trans}, img_options) }}
             {%- if site.applanding.demo is defined ~%}
             </a>
             {%- endif ~%}
