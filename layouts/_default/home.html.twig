@@ -13,7 +13,7 @@
                 {%- if not loop.last -%}
                   {%- set class = class ~ ' pr-4' -%}
                 {%- endif ~%}
-                {{ asset(button.image)|html({class, alt: button.name ~ ' button'}) }}
+                {{ html(asset(button.image), {class, alt: button.name ~ ' button'}) }}
               </a>
             {%- endfor ~%}
             </div>
@@ -35,13 +35,8 @@
             {%- if site.applanding.demo is defined ~%}
             <a href="{{ site.applanding.demo }}" title="{% trans %}Go to the demo{% endtrans %}">
             {%- endif ~%}
-              {%- set screenshot = site.applanding.screenshot -%}
-              {%- set img_class = 'mx-auto lg:mr-0 slide-in-bottom' -%}
-              {%- set img_options = {formats: ['webp'], responsive: true} -%}
-              {%- if screenshot.mobile is defined ~%}
-              {{ asset(screenshot.mobile)|html({class: img_class ~ ' md:hidden', alt: 'Screenshot'|trans}, img_options) }}
-              {%- endif ~%}
-              {{ asset(screenshot.desktop|default(screenshot))|html({class: img_class ~ (screenshot.mobile is defined ? ' hidden md:block'), alt: 'Screenshot'|trans}, img_options) }}
+              {#- the mobile variant (e.g.: `screenshot.mobile.png`) is added through `layouts.images.mobile_suffix` ~#}
+              {{ html(asset(site.applanding.screenshot), {class: 'mx-auto lg:mr-0 slide-in-bottom', alt: 'Screenshot'|trans}, {formats: ['webp'], responsive: true}) }}
             {%- if site.applanding.demo is defined ~%}
             </a>
             {%- endif ~%}

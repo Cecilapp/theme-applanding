@@ -41,16 +41,9 @@ applanding:
 
 ### Screenshot
 
-`screenshot` can be a single image, or distinct images for mobile and desktop:
+To display a distinct image on mobile, add an image suffixed with `.mobile` alongside the original one (e.g.: `preview.mobile.png`). The suffix and the media query can be changed with the [`layouts.images.mobile_suffix` and `layouts.images.mobile_media_query`](https://cecil.app/documentation/configuration/#layouts-images) options.
 
-```yaml
-applanding:
-  screenshot:
-    mobile: preview-mobile.png
-    desktop: preview-desktop.png
-```
-
-To display a dark mode variant, add an image suffixed with `.dark` alongside the original one (e.g.: `preview-desktop.dark.png`). The suffix can be changed with the [`layouts.images.dark_suffix`](https://cecil.app/documentation/configuration/#layouts-images) option.
+To display a dark mode variant, add an image suffixed with `.dark` alongside the original one (e.g.: `preview.dark.png`). The suffix can be changed with the [`layouts.images.dark_suffix`](https://cecil.app/documentation/configuration/#layouts-images) option.
 
 ### Build the CSS
 

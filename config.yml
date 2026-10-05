@@ -1,3 +1,5 @@
 layouts:
   images:
     dark_suffix: .dark # dark variant of an image: `screenshot.dark.png` alongside `screenshot.png`
+    mobile_suffix: .mobile # mobile variant of an image: `screenshot.mobile.png` alongside `screenshot.png`
+    mobile_media_query: '(max-width: 767px)' # below the Tailwind `md` breakpoint
