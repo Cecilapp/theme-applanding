@@ -19,6 +19,8 @@ menus:
     - {id: cecil, name: Cecil, url: 'https://cecil.app', weight: 20}
 applanding:
   buttons:
+    - name: Get started
+      url: /features/
     - name: Deploy to Netlify
       url: https://cecil.app/hosting/netlify/deploy
       image: https://www.netlify.com/img/deploy/button.svg

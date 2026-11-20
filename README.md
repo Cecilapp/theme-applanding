@@ -62,7 +62,7 @@ Theme options, with their default values:
 
 ```yaml
 applanding:
-  buttons: []        # list of buttons: `{name: <name>, url: <url>, image: <image path or URL>}`
+  buttons: []        # list of buttons: `{name: <name>, url: <url>, image: <optional image path or URL>}` (text button without image)
   source: ''         # URL of the source code: "Source" link and GitHub icon in the header
   documentation: ''  # URL of the documentation: "Documentation" link
   demo: ''           # URL of the demo: "Demo" link, and link of the screenshot

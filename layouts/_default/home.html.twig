@@ -8,15 +8,17 @@
             <h1 id="baseline" class="leading-tight text-center md:text-left">{{ site.baseline|default(page.title) }}</h1>
             <div id="content" class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">{{ page.content }}</div>
             {%- if options.buttons|default([]) is not empty ~%}
-            <div id="buttons" class="flex w-full justify-center md:justify-start fade-in">
+            <div id="buttons" class="flex flex-wrap items-center gap-4 w-full justify-center md:justify-start fade-in">
             {%- for button in options.buttons ~%}
-              <a href="{{ url(button.url) }}">
-                {%- set class = 'md:h-12 w-full bounce-top-icons' -%}
-                {%- if not loop.last -%}
-                  {%- set class = class ~ ' pr-4' -%}
-                {%- endif ~%}
-                {{ html(asset(button.image), {class, alt: button.name}) }}
+              {%- if button.image|default ~%}
+              {#- image button (e.g.: "Deploy to Netlify") ~#}
+              <a href="{{ url(button.url) }}" class="bounce-top-icons">
+                {{ html(asset(button.image), {class: 'md:h-12 w-auto', alt: button.name}) }}
               </a>
+              {%- else ~%}
+              {#- text button ~#}
+              <a href="{{ url(button.url) }}" class="bounce-top-icons inline-flex items-center h-10 md:h-12 px-5 md:px-6 rounded-full font-medium md:text-lg bg-slate-900 text-white hover:no-underline hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white">{{ button.name }}</a>
+              {%- endif ~%}
             {%- endfor ~%}
             </div>
             {%- endif ~%}
