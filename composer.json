@@ -5,7 +5,8 @@
   "keywords": ["Cecil", "theme", "landing"],
   "license": "MIT",
   "require": {
-    "cecil/theme-installer": "^1.4|^2.0"
+    "cecil/theme-installer": "^1.4|^2.0",
+    "cecil/theme-ogimage": "^1.3"
   },
   "extra": {
     "name": "applanding",
