@@ -103,6 +103,8 @@ To display a distinct image on mobile, add an image suffixed with `.mobile` alon
 
 To display a dark mode variant, add an image suffixed with `.dark` alongside the original one (e.g.: `preview.dark.png`). The suffix can be changed with the [`layouts.images.dark_suffix`](https://cecil.app/documentation/configuration/layouts/) option.
 
+> The dark variant follows the system preference (`prefers-color-scheme` media query), not the choice made with the dark mode toggle button.
+
 ### Dark mode toggle
 
 By default, the color scheme follows the system preference. To add a toggle button in the header, install the [darkmodetoggle](https://github.com/Cecilapp/theme-darkmodetoggle) component theme and enable it before `applanding`:
