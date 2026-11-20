@@ -63,16 +63,16 @@ Theme options, with their default values:
 
 ```yaml
 applanding:
-  buttons: []        # list of buttons: `{name: <name>, url: <url>, image: <optional image path or URL>}` (text button without image)
-  source: ''         # URL of the source code: "Source" link and GitHub icon in the header
-  documentation: ''  # URL of the documentation: "Documentation" link
-  demo: ''           # URL of the demo: "Demo" link, and link of the screenshot
-  links: []          # custom links, displayed after the previous ones: `{name: <name>, url: <url>}`
-  screenshot: ''     # image displayed next to the baseline (path in `assets/` or URL)
-  screenshot_alt: '' # alternative text of the screenshot ("Screenshot" by default)
-  accent: ''         # accent color (CSS color, e.g. `#4f46e5`): text buttons, links and arrows; slate by default
+  buttons: []         # list of buttons: `{name: <name>, url: <url>, image: <optional image path or URL>}` (text button without image)
+  source: ''          # URL of the source code: "Source" link and GitHub icon in the header
+  documentation: ''   # URL of the documentation: "Documentation" link
+  demo: ''            # URL of the demo: "Demo" link, and link of the screenshot
+  links: []           # custom links, displayed after the previous ones: `{name: <name>, url: <url>}`
+  screenshot: ''      # image displayed next to the baseline (path in `assets/` or URL)
+  screenshot_alt: ''  # alternative text of the screenshot ("Screenshot" by default)
+  accent: ''          # accent color (CSS color, e.g. `#4f46e5`): text buttons, links and arrows; slate by default
   accent_contrast: '' # color of the text on the accent color (`#fff` by default)
-  accent_dark: ''    # accent color in dark mode, preferably lighter (`accent` by default)
+  accent_dark: ''     # accent color in dark mode, preferably lighter (`accent` by default)
   accent_dark_contrast: '' # color of the text on the dark mode accent color (`#0f172a` by default)
 ```
 
@@ -158,7 +158,7 @@ The CSS (`assets/styles.css`) is compiled from `assets/tailwind.css` with the Ta
 
 ```bash
 composer install
-composer css:build   # or `composer css:watch`
+composer css:build # or `composer css:watch`
 ```
 
 ## License
