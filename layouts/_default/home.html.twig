@@ -42,7 +42,7 @@
             <a href="{{ url(options.demo) }}" title="{% trans %}Go to the demo{% endtrans %}">
             {%- endif ~%}
               {#- the dark and mobile variants (e.g.: `screenshot.dark.png`, `screenshot.mobile.png`) are added through `layouts.images` options ~#}
-              {{ html(asset(options.screenshot), {class: 'applanding-screenshot mx-auto lg:mr-0 slide-in-bottom', alt: 'Screenshot'|trans, fetchpriority: 'high'}, {formats: ['webp'], responsive: true}) }}
+              {{ html(asset(options.screenshot), {class: 'applanding-screenshot mx-auto lg:mr-0 slide-in-bottom', alt: options.screenshot_alt|default('Screenshot'|trans), fetchpriority: 'high'}, {formats: ['webp'], responsive: true}) }}
             {%- if options.demo|default ~%}
             </a>
             {%- endif ~%}

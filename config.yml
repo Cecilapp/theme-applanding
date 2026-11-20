@@ -22,3 +22,4 @@ applanding:
   documentation: ''  # URL of the documentation: "Documentation" link
   demo: ''           # URL of the demo: "Demo" link, and link of the screenshot
   screenshot: ''     # image displayed next to the baseline (path in `assets/` or URL)
+  screenshot_alt: '' # alternative text of the screenshot ("Screenshot" by default)

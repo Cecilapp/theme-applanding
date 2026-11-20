@@ -67,6 +67,7 @@ applanding:
   documentation: ''  # URL of the documentation: "Documentation" link
   demo: ''           # URL of the demo: "Demo" link, and link of the screenshot
   screenshot: ''     # image displayed next to the baseline (path in `assets/` or URL)
+  screenshot_alt: '' # alternative text of the screenshot ("Screenshot" by default)
 ```
 
 **Example:**
@@ -85,6 +86,7 @@ applanding:
   documentation: https://github.com/Cecilapp/the-butler#readme
   demo: https://the-butler-demo.cecil.app
   screenshot: cecil-preview.png
+  screenshot_alt: Home page of The Butler
 ```
 
 The entries of the `main` menu are displayed in the header.
