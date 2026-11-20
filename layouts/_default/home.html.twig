@@ -2,7 +2,7 @@
 
         {%- block main ~%}
         {%- set options = site.applanding|default({}) ~%}
-        <div class="grow items-center flex flex-col lg:flex-row gap-6">
+        <div class="grow items-center flex flex-col lg:flex-row gap-6 overflow-y-clip">
           {#- text ~#}
           <div class="basis-1/2">
             <h1 id="baseline" class="leading-tight text-center md:text-left">{{ site.baseline|default(page.title) }}</h1>
