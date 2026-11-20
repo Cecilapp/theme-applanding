@@ -47,6 +47,16 @@
               </ul>
             </nav>
             {%- endif ~%}
+            {#- languages: links to the translations of the page ~#}
+            {%- if page.translations|default([]) is not empty ~%}
+            <nav aria-label="{% trans %}Languages{% endtrans %}">
+              <ul class="flex gap-2 text-sm font-medium uppercase">
+              {%- for translation in page.translations ~%}
+                <li><a href="{{ url(translation) }}" hreflang="{{ translation.language }}" lang="{{ translation.language }}" title="{{ site.language.name(translation.language) }}">{{ translation.language }}</a></li>
+              {%- endfor ~%}
+              </ul>
+            </nav>
+            {%- endif ~%}
             {%- block links ~%}
             {#- GitHub ~#}
             {%- if site.applanding.source|default ~%}
