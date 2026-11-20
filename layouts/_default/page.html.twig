@@ -19,19 +19,21 @@
   </head>
   <body class="leading-normal tracking-normal text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-900">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:px-3 focus:py-2 focus:rounded focus:bg-slate-100 dark:focus:bg-slate-800">{% trans %}Skip to content{% endtrans %}</a>
+    {#- the header and the footer fade in on the home page only ~#}
+    {%- set fade_in = page.type == 'homepage' ~%}
     <div class="container mx-auto px-6 py-6 min-h-svh flex flex-col">
       {%- block header ~%}
       <header class="mb-8">
         <div class="flex flex-wrap items-center justify-between gap-4">
           {#- title ~#}
-          <div class="fade-in font-serif font-bold text-xl lg:text-2xl">
+          <div class="font-serif font-bold text-xl lg:text-2xl{{ fade_in ? ' fade-in' }}">
             {%- if page.type == 'homepage' ~%}
             {{ site.title }}
             {%- else ~%}
             <a href="{{ url(site.home) }}" class="hover:no-underline">{{ site.title }}</a>
             {%- endif ~%}
           </div>
-          <div class="flex items-center justify-end gap-4 fade-in">
+          <div class="flex items-center justify-end gap-4{{ fade_in ? ' fade-in' }}">
             {#- menu ~#}
             {%- set entries = (site.menus.main ?? [])|sort_by_weight|filter(entry => entry.id != 'index') ~%}
             {%- if entries is not empty ~%}
@@ -69,7 +71,7 @@
         </article>
         {%- endblock main ~%}
       </main>
-      <footer class="mt-6 text-sm text-center md:text-left fade-in">
+      <footer class="mt-6 text-sm text-center md:text-left{{ fade_in ? ' fade-in' }}">
         {%- block footer ~%}
         <p class="text-slate-700 dark:text-slate-300">{% trans with {'%powered_by%': '<a href="' ~ cecil.url ~ '" class="underline">Cecil</a>'} %}Powered by %powered_by%{% endtrans %}</p>
         {%- endblock footer ~%}
