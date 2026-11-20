@@ -74,6 +74,23 @@
   content: attr(data-lang);
   @apply absolute top-1 right-2 text-xs uppercase tracking-wide text-slate-400;
 }
+/* pagination */
+.prose .paginator ul {
+  @apply flex flex-wrap gap-2 mt-8 p-0 list-none;
+}
+.prose .paginator li {
+  @apply m-0 p-0;
+}
+.prose .paginator a,
+.prose .paginator span {
+  @apply inline-block px-3 py-1 rounded-md border border-slate-200 no-underline dark:border-slate-700;
+}
+.prose .paginator a[aria-current] {
+  @apply font-bold bg-accent text-accent-contrast border-transparent;
+}
+.prose .paginator [aria-disabled] {
+  @apply opacity-50;
+}
 /* notes */
 .prose aside.note {
   --applanding-note-color: var(--color-slate-500);

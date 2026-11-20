@@ -67,7 +67,9 @@
               <ul class="flex flex-wrap gap-4">
               {%- for entry in entries ~%}
                 {%- set entry_url = url(entry.url) ~%}
-                <li><a href="{{ entry_url }}" class="aria-[current=page]:font-bold"{% if entry_url == current_url %} aria-current="page"{% endif %}{% if entry.url is external %} rel="noopener"{% endif %}>{{ entry.name }}</a></li>
+                {#- current page, or current section ~#}
+                {%- set current = entry_url == current_url ? 'page' : (page.section|default and entry.id == page.section ? 'true') ~%}
+                <li><a href="{{ entry_url }}" class="[&[aria-current]]:font-bold"{% if current %} aria-current="{{ current }}"{% endif %}{% if entry.url is external %} rel="noopener"{% endif %}>{{ entry.name }}</a></li>
               {%- endfor ~%}
               </ul>
             </nav>
