@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {#- dark mode toggle, if the `darkmodetoggle` theme is installed ~#}
+    {{- include('partials/darkmodetoggle-head.html.twig', {site}, with_context = false, ignore_missing = true) }}
     {{- include('partials/metatags.html.twig', {page, site}, with_context = false) }}
     {%- block head_css ~%}
     <style>
@@ -49,6 +51,7 @@
             </a>
             {%- endif ~%}
             {%- endblock links ~%}
+            {{- include('partials/darkmodetoggle.html.twig', {class: 'hover:text-slate-700 dark:hover:text-slate-100'}, ignore_missing = true) }}
           </div>
         </div>
       </header>

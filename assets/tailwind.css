@@ -1,5 +1,17 @@
 @import 'tailwindcss';
-@source './layouts/**/*.html.twig';
+@source '../layouts/**/*.twig';
+
+/* dark mode: `data-theme` attribute (e.g. set by the `darkmodetoggle` theme), otherwise the system preference */
+@custom-variant dark {
+  &:where([data-theme=dark], [data-theme=dark] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *) {
+      @slot;
+    }
+  }
+}
 
 @layer base {
   h1 {
