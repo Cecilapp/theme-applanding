@@ -1,0 +1,69 @@
+name: Build and deploy demo
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CECIL_BASEURL: https://cecilapp.github.io/theme-applanding/
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.3
+          extensions: mbstring, intl, gettext, fileinfo, gd
+          tools: composer
+          coverage: none
+
+      - name: Download Cecil
+        run: |
+          curl -sSOL https://cecil.app/cecil.phar
+          php cecil.phar --version
+
+      - name: Install the demo dependencies (component themes)
+        run: composer install --working-dir=demo --no-interaction --no-progress
+
+      - name: Link theme into the demo site
+        run: php demo/link.php
+
+      - name: Build demo
+        run: php cecil.phar build demo -vv
+
+      - name: Setup Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v6
+
+      - name: Upload artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: demo/_site
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

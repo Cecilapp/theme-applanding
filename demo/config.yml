@@ -1,0 +1,28 @@
+title: App Landing
+baseline: A landing page for your app
+description: Demo of the App Landing theme for Cecil.
+baseurl: http://localhost:8000/
+language: en
+languages:
+  - code: en
+    name: English
+    locale: en_US
+  - code: fr
+    name: Français
+    locale: fr_FR
+theme:
+  - darkmodetoggle
+  - applanding
+menus:
+  main:
+    - {id: features, name: Features, url: /features/, weight: 10}
+    - {id: cecil, name: Cecil, url: 'https://cecil.app', weight: 20}
+applanding:
+  buttons:
+    - name: Deploy to Netlify
+      url: https://cecil.app/hosting/netlify/deploy
+      image: https://www.netlify.com/img/deploy/button.svg
+  source: https://github.com/Cecilapp/theme-applanding
+  documentation: https://github.com/Cecilapp/theme-applanding#readme
+  demo: https://the-butler-demo.cecil.app
+  screenshot: screenshot.png
