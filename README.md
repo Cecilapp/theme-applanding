@@ -4,7 +4,7 @@ _App Landing_ is a [Cecil](https://cecil.app) theme designed to help you quickly
 
 ![Demo screenshot](docs/screenshot.png)
 
-**[Demo](https://cecilapp.github.io/theme-applanding/)**
+**[Demo](https://demo.cecil.app/theme-applanding/)**
 
 ## Features
 
