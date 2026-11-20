@@ -6,6 +6,11 @@ layouts:
     dark_suffix: .dark # dark variant of an image: `screenshot.dark.png` alongside `screenshot.png`
     mobile_suffix: .mobile # mobile variant of an image: `screenshot.mobile.png` alongside `screenshot.png`
     mobile_media_query: '(max-width: 767px)' # below the Tailwind `md` breakpoint
+assets:
+  images:
+    responsive:
+      sizes:
+        applanding-screenshot: '(min-width: 1536px) 744px, (min-width: 1024px) 50vw, 100vw' # half of the container on desktop
 pages:
   default:
     404:
