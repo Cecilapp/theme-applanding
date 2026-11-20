@@ -1,45 +1,50 @@
 {% extends ['page.html.twig', '_default/page.html.twig'] %}
 
         {%- block main ~%}
+        {%- set options = site.applanding|default({}) ~%}
         <div class="grow items-center flex flex-col lg:flex-row gap-6">
           {#- text ~#}
           <div class="basis-1/2">
-            <h1 id="baseline" class="leading-tight text-center md:text-left">{{ site.baseline }}</h1>
+            <h1 id="baseline" class="leading-tight text-center md:text-left">{{ site.baseline|default(page.title) }}</h1>
             <div id="content" class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">{{ page.content }}</div>
+            {%- if options.buttons|default([]) is not empty ~%}
             <div id="buttons" class="flex w-full justify-center md:justify-start fade-in">
-            {%- for button in site.applanding.buttons ~%}
-              <a href="{{ button.url }}">
+            {%- for button in options.buttons ~%}
+              <a href="{{ url(button.url) }}">
                 {%- set class = 'md:h-12 w-full bounce-top-icons' -%}
                 {%- if not loop.last -%}
                   {%- set class = class ~ ' pr-4' -%}
                 {%- endif ~%}
-                {{ html(asset(button.image), {class, alt: button.name ~ ' button'}) }}
+                {{ html(asset(button.image), {class, alt: button.name}) }}
               </a>
             {%- endfor ~%}
             </div>
+            {%- endif ~%}
             <ul id="links" class="mt-4 fade-in">
             {%- for link in ['source', 'documentation', 'demo'] ~%}
-              {%- if attribute(site.applanding, link) is defined ~%}
+              {%- if options[link]|default ~%}
               <li class="flex items-center mt-2 justify-center md:justify-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
                 </svg>
-                <a href="{{ attribute(site.applanding, link) }}" class="font-medium">{{ link|trans }}</a>
+                <a href="{{ url(options[link]) }}" class="font-medium">{{ link|trans }}</a>
               </li>
               {%- endif ~%}
             {%- endfor ~%}
             </ul>
           </div>
           {#- image ~#}
+          {%- if options.screenshot|default ~%}
           <div class="basis-1/2">
-            {%- if site.applanding.demo is defined ~%}
-            <a href="{{ site.applanding.demo }}" title="{% trans %}Go to the demo{% endtrans %}">
+            {%- if options.demo|default ~%}
+            <a href="{{ url(options.demo) }}" title="{% trans %}Go to the demo{% endtrans %}">
             {%- endif ~%}
-              {#- the mobile variant (e.g.: `screenshot.mobile.png`) is added through `layouts.images.mobile_suffix` ~#}
-              {{ html(asset(site.applanding.screenshot), {class: 'mx-auto lg:mr-0 slide-in-bottom', alt: 'Screenshot'|trans}, {formats: ['webp'], responsive: true}) }}
-            {%- if site.applanding.demo is defined ~%}
+              {#- the dark and mobile variants (e.g.: `screenshot.dark.png`, `screenshot.mobile.png`) are added through `layouts.images` options ~#}
+              {{ html(asset(options.screenshot), {class: 'mx-auto lg:mr-0 slide-in-bottom', alt: 'Screenshot'|trans}, {formats: ['webp'], responsive: true}) }}
+            {%- if options.demo|default ~%}
             </a>
             {%- endif ~%}
           </div>
+          {%- endif ~%}
         </div>
-        {%- endblock ~%}
+        {%- endblock main ~%}
