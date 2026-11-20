@@ -29,3 +29,5 @@ applanding:
   demo: https://the-butler-demo.cecil.app
   screenshot: screenshot.png
   screenshot_alt: Home page of a blog made with Cecil
+  accent: "#4f46e5"
+  accent_dark: "#818cf8"

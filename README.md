@@ -11,6 +11,7 @@ _App Landing_ is a [Cecil](https://cecil.app) theme designed to help you quickly
 - Landing page: baseline, introduction, buttons, links (source, documentation, demo) and screenshot
 - Screenshot with dark mode and mobile variants
 - Styled content pages: typography, code highlighting, [Markdown notes](https://cecil.app/documentation/content/markdown/#notes) (callouts, tabs, steps, accordion, cards)
+- Configurable accent color (with a dark mode variant)
 - Light and dark modes, with an optional toggle button ([darkmodetoggle](https://github.com/Cecilapp/theme-darkmodetoggle))
 - Open Graph image generated for each page ([ogimage](https://github.com/Cecilapp/theme-ogimage))
 - Accessible: skip link, `aria-current` menu, animations disabled when reduced motion is preferred
@@ -68,6 +69,10 @@ applanding:
   demo: ''           # URL of the demo: "Demo" link, and link of the screenshot
   screenshot: ''     # image displayed next to the baseline (path in `assets/` or URL)
   screenshot_alt: '' # alternative text of the screenshot ("Screenshot" by default)
+  accent: ''         # accent color (CSS color, e.g. `#4f46e5`): text buttons, links and arrows; slate by default
+  accent_contrast: '' # color of the text on the accent color (`#fff` by default)
+  accent_dark: ''    # accent color in dark mode, preferably lighter (`accent` by default)
+  accent_dark_contrast: '' # color of the text on the dark mode accent color (`#0f172a` by default)
 ```
 
 **Example:**

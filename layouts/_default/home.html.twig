@@ -17,7 +17,7 @@
               </a>
               {%- else ~%}
               {#- text button ~#}
-              <a href="{{ url(button.url) }}" class="bounce-top-icons inline-flex items-center h-10 md:h-12 px-5 md:px-6 rounded-full font-medium md:text-lg bg-slate-900 text-white hover:no-underline hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white">{{ button.name }}</a>
+              <a href="{{ url(button.url) }}" class="bounce-top-icons inline-flex items-center h-10 md:h-12 px-5 md:px-6 rounded-full font-medium md:text-lg bg-accent text-accent-contrast hover:no-underline hover:opacity-85">{{ button.name }}</a>
               {%- endif ~%}
             {%- endfor ~%}
             </div>
@@ -26,7 +26,7 @@
             {%- for link in ['source', 'documentation', 'demo'] ~%}
               {%- if options[link]|default ~%}
               <li class="flex items-center mt-2 justify-center md:justify-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
                 </svg>
                 <a href="{{ url(options[link]) }}" class="font-medium">{{ link|trans }}</a>

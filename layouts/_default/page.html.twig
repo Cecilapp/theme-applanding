@@ -9,6 +9,31 @@
     {{- include('partials/metatags.html.twig', {page, site, image: og_image(page)}, with_context = false) }}
     {%- block head_css ~%}
     {{ html(asset('styles.css')) }}
+    {#- accent color, and its dark mode variant ~#}
+    {%- set accent = site.applanding.accent|default ~%}
+    {%- set accent_dark = site.applanding.accent_dark|default ~%}
+    {%- if accent or accent_dark ~%}
+    <style>{% apply minify_css ~%}
+      {%- if accent %}
+      :root {
+        --applanding-accent: {{ accent }};
+        --applanding-accent-contrast: {{ site.applanding.accent_contrast|default('#fff') }};
+      }
+      {%- endif %}
+      {%- if accent_dark %}
+      [data-theme=dark] {
+        --applanding-accent: {{ accent_dark }};
+        --applanding-accent-contrast: {{ site.applanding.accent_dark_contrast|default('#0f172a') }};
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme=light]) {
+          --applanding-accent: {{ accent_dark }};
+          --applanding-accent-contrast: {{ site.applanding.accent_dark_contrast|default('#0f172a') }};
+        }
+      }
+      {%- endif %}
+    {% endapply %}</style>
+    {%- endif ~%}
     {#- code highlighting (enabled by default) ~#}
     {%- set highlight = config.pages.body.highlight ?? true ~%}
     {%- if highlight is iterable ? (highlight.enabled ?? true) : highlight ~%}
@@ -74,7 +99,7 @@
       {%- endblock header ~%}
       <main id="main" class="grow flex flex-col">
         {%- block main ~%}
-        <article class="prose prose-slate dark:prose-invert md:prose-lg max-w-3xl">
+        <article class="prose prose-slate dark:prose-invert md:prose-lg max-w-3xl prose-a:text-accent">
           {%- block content ~%}
           {{ page.content }}
           {%- endblock content ~%}
