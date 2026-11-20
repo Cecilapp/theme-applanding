@@ -6,6 +6,10 @@ layouts:
     dark_suffix: .dark # dark variant of an image: `screenshot.dark.png` alongside `screenshot.png`
     mobile_suffix: .mobile # mobile variant of an image: `screenshot.mobile.png` alongside `screenshot.png`
     mobile_media_query: '(max-width: 767px)' # below the Tailwind `md` breakpoint
+pages:
+  default:
+    404:
+      ogimage: false # no Open Graph image for the "Page not found" page
 # Theme options
 applanding:
   buttons: []        # list of buttons: `{name: <name>, url: <url>, image: <image path or URL>}`
