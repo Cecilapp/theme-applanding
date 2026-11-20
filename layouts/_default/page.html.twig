@@ -114,6 +114,29 @@
         {%- endblock footer ~%}
       </footer>
     </div>
+    {#- dark variants of images (`<source media="(prefers-color-scheme: dark)">`) follow the dark mode toggle button, if any ~#}
+    {%- if config.layouts.images.dark_suffix|default or config.pages.body.images.dark_suffix|default ~%}
+    <script>{% apply minify_js ~%}
+      (function () {
+        var sources = document.querySelectorAll('picture source[media*="prefers-color-scheme"]');
+        if (!window.colorScheme || !sources.length) {
+          return;
+        }
+        sources.forEach(function (source) {
+          source.dataset.media = source.getAttribute('media');
+        });
+        function update() {
+          // an always true (or false) media feature replaces the system preference
+          var feature = window.colorScheme.current() === 'dark' ? '(min-width: 0px)' : '(max-width: 0px)';
+          sources.forEach(function (source) {
+            source.setAttribute('media', source.dataset.media.replace(/\(prefers-color-scheme:\s*dark\)/, feature));
+          });
+        }
+        update();
+        document.addEventListener('colorschemechange', update);
+      })();
+    {% endapply %}</script>
+    {%- endif ~%}
     {%- block scripts %}{% endblock scripts ~%}
   </body>
 </html>
