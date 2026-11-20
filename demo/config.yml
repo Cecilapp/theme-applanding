@@ -27,6 +27,9 @@ applanding:
   source: https://github.com/Cecilapp/theme-applanding
   documentation: https://github.com/Cecilapp/theme-applanding#readme
   demo: https://the-butler-demo.cecil.app
+  links:
+    - name: Cecil themes
+      url: https://cecil.app/themes/
   screenshot: screenshot.png
   screenshot_alt: Home page of a blog made with Cecil
   accent: "#4f46e5"
