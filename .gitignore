@@ -1,2 +1,5 @@
 vendor/
 .cache/
+composer.lock
+/themes/
+/.vscode

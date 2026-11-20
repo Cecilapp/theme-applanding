@@ -1,0 +1,15 @@
+{
+  "name": "cecil/theme-applanding-demo",
+  "description": "Demo website of the App Landing theme",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "cecil/theme-darkmodetoggle": "^1.0",
+    "cecil/theme-ogimage": "^1.3"
+  },
+  "config": {
+    "allow-plugins": {
+      "cecil/theme-installer": true
+    }
+  }
+}

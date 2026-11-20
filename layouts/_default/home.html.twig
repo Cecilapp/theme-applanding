@@ -1,45 +1,60 @@
 {% extends ['page.html.twig', '_default/page.html.twig'] %}
 
         {%- block main ~%}
-        <div class="grow items-center flex flex-col lg:flex-row gap-6">
+        {%- set options = site.applanding|default({}) ~%}
+        <div class="grow items-center flex flex-col lg:flex-row gap-6 overflow-y-clip">
           {#- text ~#}
           <div class="basis-1/2">
-            <h1 id="baseline" class="leading-tight text-center md:text-left">{{ site.baseline }}</h1>
+            <h1 id="baseline" class="leading-tight text-center md:text-left">{{ site.baseline|default(page.title) }}</h1>
             <div id="content" class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">{{ page.content }}</div>
-            <div id="buttons" class="flex w-full justify-center md:justify-start fade-in">
-            {%- for button in site.applanding.buttons ~%}
-              <a href="{{ button.url }}">
-                {%- set class = 'md:h-12 w-full bounce-top-icons' -%}
-                {%- if not loop.last -%}
-                  {%- set class = class ~ ' pr-4' -%}
-                {%- endif ~%}
-                {{ html(asset(button.image), {class, alt: button.name ~ ' button'}) }}
+            {%- if options.buttons|default([]) is not empty ~%}
+            <div id="buttons" class="flex flex-wrap items-center gap-4 w-full justify-center md:justify-start fade-in">
+            {%- for button in options.buttons ~%}
+              {%- if button.image|default ~%}
+              {#- image button (e.g.: "Deploy to Netlify") ~#}
+              <a href="{{ url(button.url) }}" class="bounce-top-icons">
+                {{ html(asset(button.image), {class: 'md:h-12 w-auto', alt: button.name}) }}
               </a>
-            {%- endfor ~%}
-            </div>
-            <ul id="links" class="mt-4 fade-in">
-            {%- for link in ['source', 'documentation', 'demo'] ~%}
-              {%- if attribute(site.applanding, link) is defined ~%}
-              <li class="flex items-center mt-2 justify-center md:justify-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                </svg>
-                <a href="{{ attribute(site.applanding, link) }}" class="font-medium">{{ link|trans }}</a>
-              </li>
+              {%- else ~%}
+              {#- text button ~#}
+              <a href="{{ url(button.url) }}" class="bounce-top-icons inline-flex items-center h-10 md:h-12 px-5 md:px-6 rounded-full font-medium md:text-lg bg-accent text-accent-contrast hover:no-underline hover:opacity-85">{{ button.name }}</a>
               {%- endif ~%}
             {%- endfor ~%}
+            </div>
+            {%- endif ~%}
+            {#- links: source, documentation and demo, then the custom links ~#}
+            {%- set links = [] ~%}
+            {%- for key in ['source', 'documentation', 'demo'] ~%}
+              {%- if options[key]|default ~%}
+              {%- set links = links|merge([{name: key|trans, url: options[key]}]) ~%}
+              {%- endif ~%}
+            {%- endfor ~%}
+            {%- set links = links|merge(options.links|default([])) ~%}
+            {%- if links is not empty ~%}
+            <ul id="links" class="mt-4 fade-in">
+            {%- for link in links ~%}
+              <li class="flex items-center mt-2 justify-center md:justify-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <a href="{{ url(link.url) }}" class="font-medium">{{ link.name }}</a>
+              </li>
+            {%- endfor ~%}
             </ul>
+            {%- endif ~%}
           </div>
           {#- image ~#}
+          {%- if options.screenshot|default ~%}
           <div class="basis-1/2">
-            {%- if site.applanding.demo is defined ~%}
-            <a href="{{ site.applanding.demo }}" title="{% trans %}Go to the demo{% endtrans %}">
+            {%- if options.demo|default ~%}
+            <a href="{{ url(options.demo) }}" title="{% trans %}Go to the demo{% endtrans %}">
             {%- endif ~%}
-              {#- the mobile variant (e.g.: `screenshot.mobile.png`) is added through `layouts.images.mobile_suffix` ~#}
-              {{ html(asset(site.applanding.screenshot), {class: 'mx-auto lg:mr-0 slide-in-bottom', alt: 'Screenshot'|trans}, {formats: ['webp'], responsive: true}) }}
-            {%- if site.applanding.demo is defined ~%}
+              {#- the dark and mobile variants (e.g.: `screenshot.dark.png`, `screenshot.mobile.png`) are added through `layouts.images` options ~#}
+              {{ html(asset(options.screenshot), {class: 'applanding-screenshot mx-auto lg:mr-0 slide-in-bottom', alt: options.screenshot_alt|default('Screenshot'|trans), fetchpriority: 'high'}, {formats: ['webp'], responsive: true}) }}
+            {%- if options.demo|default ~%}
             </a>
             {%- endif ~%}
           </div>
+          {%- endif ~%}
         </div>
-        {%- endblock ~%}
+        {%- endblock main ~%}

@@ -1,0 +1,36 @@
+{#- all showable pages by default ~#}
+{%- set pages = site.pages.showable ~%}
+{#- in case of a list page, take its sub pages ~#}
+{%- if page.pages is defined ~%}
+{%- set pages = page.pages ~%}
+{%- endif ~%}
+{#- in case of a paginated list page, take the paginator list pages ~#}
+{%- if page.paginator.pages is defined ~%}
+{%- set pages = page.paginator.pages ~%}
+{%- endif ~%}
+{#- dates are displayed if pages are sorted by date ~#}
+{%- set sortby = page.sortby|default(config.pages.sortby) ~%}
+{%- set show_date = (sortby is iterable ? sortby.variable|default('date') : sortby) == 'date' ~%}
+{% extends ['page.html.twig', '_default/page.html.twig'] %}
+
+          {%- block content ~%}
+          {%- if page.content is not empty ~%}
+          {{ page.content }}
+          {%- else ~%}
+          <h1>{{ page.title }}</h1>
+          {%- endif ~%}
+          <ul class="not-prose mt-8 space-y-8">
+          {%- for p in pages ~%}
+            <li>
+              <h2 class="text-xl md:text-2xl font-bold"><a href="{{ url(p) }}" class="hover:text-accent">{{ p.title|e }}</a></h2>
+              {%- if show_date and p.date is defined and p.date ~%}
+              <time datetime="{{ p.date|date('c') }}" class="block mt-1 text-sm text-slate-500 dark:text-slate-400">{{ p.date|format_date('long') }}</time>
+              {%- endif ~%}
+              {%- if p.description|default ~%}
+              <p class="mt-2 mb-0 text-slate-700 dark:text-slate-300">{{ p.description|e }}</p>
+              {%- endif ~%}
+            </li>
+          {%- endfor ~%}
+          </ul>
+          {{- include('partials/paginator.html.twig', {page: page}, with_context = false) ~}}
+          {%- endblock content ~%}
